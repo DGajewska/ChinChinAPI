@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Set up port for server to listen on
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Connect to DB
 mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useCreateIndex: true })
@@ -23,10 +23,13 @@ const router = express.Router();
 app.use('/api/chinchin', router);
 
 // Test route
-router.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Chin Chin API' });
-});
+// router.get('/', (req, res) => {
+//   res.json({ message: 'Welcome to Chin Chin API' });
+// });
 
+app.get('/', (req, res) => {
+  res.render
+})
 
 app.listen(port);
 console.log(`Server is listening on port ${port}`);
