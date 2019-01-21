@@ -1,0 +1,19 @@
+{
+  "name": "chinchinapi",
+  "version": "1.0.0",
+  "description": "Mongodb API for Chin Chin cocktails app for final engineering project at Makers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGajewska/ChinChinAPI.git"
+  },
+  "author": "Stuart Adair, Joe Coker, Al Eccles, Paul Fazackerley, Dana Gajewska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGajewska/ChinChinAPI/issues"
+  },
+  "homepage": "https://github.com/DGajewska/ChinChinAPI#readme"
+}
