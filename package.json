@@ -4,6 +4,7 @@
   "description": "Mongodb API for Chin Chin cocktails app for final engineering project at Makers",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
