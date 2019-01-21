@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const config = require('./config');
+
+require('dotenv').config();
 
 const app = express();
 
@@ -10,10 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Set up port for server to listen on
-const port = config.port || 3000;
+const port = 3000;
 
 // Connect to DB
-mongoose.connect(config.mongoUri, { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useCreateIndex: true })
 
 // API Routes
 const router = express.Router();
