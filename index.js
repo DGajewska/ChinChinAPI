@@ -28,7 +28,7 @@ app.use('/api/chinchin', router);
 // });
 
 app.get('/', (req, res) => {
-  res.render
+  res.render('index.ejs')
 })
 
 app.listen(port);
