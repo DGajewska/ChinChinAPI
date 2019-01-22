@@ -42,7 +42,6 @@ router.post('/ingredients/add', (req, res) =>{
 
 router.post('/cocktails/add', (req, res) =>{
   var newCocktail = new Cocktail();
-  newCocktail._id = req.body._id;
   newCocktail.name = req.body.name;
   newCocktail.category = req.body.category;
   newCocktail.glass = req.body.glass;
@@ -58,7 +57,25 @@ router.post('/cocktails/add', (req, res) =>{
   })
 })
 
-router.get('/cocktails/:ingredientName', (req, res) => {
+router.post('/ingredients/add-many', (req, res) => {
+  Ingredient.insertMany(req.body.ingredientsList, (err) => {
+    if (err){
+      res.send(err);
+    }
+    res.json({ message: 'Ingredients added successfully' });
+  });
+})
+
+router.post('/cocktails/add-many', (req, res) => {
+  Cocktail.insertMany(req.body.cocktailsList, (err) => {
+    if (err){
+      res.send(err);
+    }
+    res.json({ message: 'Cocktails added successfully' });
+  });
+})
+
+router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   Ingredient.find({name: req.params.ingredientName}, (err, ingredient) => {
     if (err){
       res.send(err);
@@ -72,6 +89,18 @@ router.get('/cocktails/:ingredientName', (req, res) => {
       }
       res.json(cocktails);
     })
+  })
+})
+
+router.get('/cocktails/:cocktailId', (req, res) => {
+  Cocktail.
+    findById(req.params.cocktailId).
+      populate({ path: 'ingredients.ingredient', select: 'name -_id'}).
+      exec((err, cocktail) => {
+        if (err) {
+          res.send(err);
+        }
+        res.json(cocktail);
   })
 })
 

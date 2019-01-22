@@ -303,7 +303,7 @@
         "amount": 1.5,
         "ingredient": "Sugar syrup" }
     ],
-    "garnish": "Half an orange slice and cherry",
+    "garnish": ["Half an orange slice", "Cherry"],
     "preparation": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/whiskey_sour.jpg" },
   { "name": "Screwdriver",
@@ -1031,7 +1031,7 @@
         "amount": 2,
         "ingredient": "Water" }
     ],
-    "garnish": ["Mint spring"],
+    "garnish": ["Mint sprig"],
     "preparation": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/mint_julep.jpg" },
   { "name": "Tommy's Margarita",
@@ -1381,7 +1381,7 @@
         "amount": 9,
         "ingredient": "Orange juice" }
     ],
-    "garnish": ["Orance slice", "Cherry"],
+    "garnish": ["Orange slice", "Cherry"],
     "preparation": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/harvey_wallbanger.jpg" }
 ]
