@@ -39,15 +39,13 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "White rum",
-        "label": "Bacardi White Rum" },
+        "ingredient": "White rum" },
       { "unit": "cl",
         "amount": 2,
         "ingredient": "Lime juice" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Grenadine" }
+        "ingredient": "Grenadine syrup" }
     ],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
   { "name": "Negroni",
@@ -62,8 +60,7 @@ cocktail_id
         "ingredient": "Campari" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Vermouth",
-        "label": "Sweet red vermouth" }
+        "ingredient": "Sweet red vermouth" }
     ],
     "garnish": "Half an orange slice",
     "preparation": "Build into old-fashioned glass filled with ice. Stir gently." },
@@ -75,9 +72,10 @@ cocktail_id
         "ingredient": "Kirsch" },
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Vermouth",
-        "label": "Dry vermouth" },
-      { "special": "3 dashes Strawberry syrup" }
+        "ingredient": "Dry vermouth"},
+        { "unit": "dashes",
+          "amount": 3,
+          "ingredient": "Strawberry syrup"}
     ],
     "preparation": "Stir all ingredients with ice and strain into a cocktail glass." },
   { "name": "Old Fashioned",
@@ -86,11 +84,15 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Whiskey",
-        "label": "Bourbon or rye whiskey" },
-      { "special": "2 dashes Angostura Bitters" },
-      { "special": "1 sugar cube" },
-      { "special": "Few dashes plain water" }
+        "ingredient": "Bourbon or rye Whiskey" },
+        { "unit": "dashes",
+          "amount": 2,
+          "ingredient": "Angostura Bitters"},
+          { "unit": "cube",
+            "amount": 1,
+            "ingredient": "Sugar"},
+            { "unit": "dashes",
+              "ingredient": "Water" }
     ],
     "garnish": "Orange slice and cherry",
     "preparation": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky." },
@@ -100,15 +102,19 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Gin",
-        "label": "Old Tom Gin" },
+        "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Vermouth",
-        "label": "Dry vermouth" },
-      { "special": "1/2 bar spoon Maraschino" },
-      { "special": "1/4 bar spoon Absinthe" },
-      { "special": "3 dashes Orange Bitters" }
+        "ingredient": "Dry vermouth" },
+        { "unit": "bar spoon",
+          "amount": 1/2,
+          "ingredient": "Maraschino"},
+          { "unit": "bar spoon",
+            "amount": 1/4,
+            "ingredient": "Absinthe"},
+            { "unit": "dashes",
+              "amount": 3,
+              "ingredient": "Orange Bitters" }
     ],
     "garnish": "Cherry and lemon twist",
     "preparation": "Stir all ingredients with ice and strain into cocktail glass." },
@@ -118,8 +124,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "White rum",
-        "label": "White Cuban Rum" },
+        "ingredient": "White rum" },
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Lime juice" },
@@ -161,12 +166,10 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Grenadine" },
+        "ingredient": "Grenadine syrup" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" },
+        "ingredient": "Sugar syrup" },
       { "special": "3 to 4 dashes Angostura bitters" }
     ],
     "garnish": "Pineapple slice and a cherry",
@@ -199,8 +202,7 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" },
+        "ingredient": "Sugar syrup" },
       { "special": "1 raw egg white (small egg)" }
     ],
     "preparation": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top." },
@@ -228,8 +230,7 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 3.0,
-        "ingredient": "Syrup",
-        "label": "Gomme syrup" },
+        "ingredient": "Gomme syrup" },
       { "special": "1 dash of Cola" }
     ],
     "garnish": "Lemon twist",
@@ -243,8 +244,7 @@ cocktail_id
         "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Syrup",
-        "label": "Raspberry syrup" },
+        "ingredient": Raspberry syrup" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" },
@@ -285,15 +285,13 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Whiskey",
-        "label": "Bourbon whiskey" },
+        "ingredient": "Bourbon whiskey" },
       { "unit": "cl",
         "amount": 3.0,
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" }
+        "ingredient": "Sugar syrup" }
     ],
     "garnish": "Half an orange slice and cherry",
     "preparation": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice." },
@@ -332,12 +330,10 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Whiskey",
-        "label": "Rye whiskey" },
+        "ingredient": "Rye whiskey"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Vermouth",
-        "label": "Red vermouth" },
+        "ingredient": "Red vermouth"},
       { "special": "1 dash Angostura Bitters" }
     ],
     "garnish": "Cherry",
@@ -369,8 +365,7 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" },
+        "ingredient": "Sugar syrup" },
       { "unit": "cl",
         "amount": 8,
         "ingredient": "Soda water" }
@@ -386,8 +381,7 @@ cocktail_id
         "ingredient": "Vodka" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Coffee liqueur",
-        "label": "Kahlúa" },
+        "ingredient": "Coffee liqueur" },
       { "special": "Sugar syrup (according to individual preference of sweetness)" },
       { "special": "1 short strong Espresso" }
     ],
@@ -401,8 +395,7 @@ cocktail_id
         "ingredient": "Tequila" },
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec",
-        "label": "Cointreau" },
+        "ingredient": "Triple Sec" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lime juice" }
@@ -467,8 +460,7 @@ cocktail_id
         "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Cherry liqueur",
-        "label": "Maraschino" },
+        "ingredient": "Maraschino Cherry liqueur" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" }
@@ -492,12 +484,10 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Créme liqueur",
-        "label": "White Créme de Cacao" },
+        "ingredient": "White Créme de Cacao" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Créme liqueur",
-        "label": "Green Créme de Menthe" },
+        "ingredient": "Green Créme de Menthe" },
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Cream" }
@@ -515,8 +505,7 @@ cocktail_id
         "ingredient": "Orange juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Syrup",
-        "label": "Grenadine" }
+        "ingredient": "Grenadine syrup" }
     ],
     "garnish": "Orange slice and a cherry",
     "preparation": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir." },
@@ -532,8 +521,7 @@ cocktail_id
         "ingredient": "Lime juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Syrup",
-        "label": "Simple syrup" }
+        "ingredient": "Simple syrup" }
     ],
     "preparation": "Shake and strain into a cocktail glass." },
   { "name": "Rusty Nail",
@@ -542,8 +530,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Whiskey",
-        "label": "Scotch whisky" },
+        "ingredient": "Scotch whisky" },
       { "unit": "cl",
         "amount": 2.5,
         "ingredient": "Drambuie" }
@@ -556,16 +543,13 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Coffee liqueur",
-        "label": "Kahlúa" },
+        "ingredient": "Coffee liqueur" },
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Cream liqueur",
-        "label": "Baileys Irish Cream" },
+        "ingredient": "Irish Cream liqueur" },
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec",
-        "label": "Grand Marnier" }
+        "ingredient": "Triple Sec" }
     ],
     "preparation": "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate." },
   { "name": "Stinger",
@@ -577,8 +561,7 @@ cocktail_id
         "ingredient": "Cognac" },
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Créme liqueur",
-        "label": "White Créme de Menthe" }
+        "ingredient": "White Créme de Menthe" }
     ],
     "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass." },
   { "name": "Golden Dream",
@@ -636,8 +619,7 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" },
+        "ingredient": "Sugar syrup" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Blackberry liqueur" }
@@ -652,8 +634,7 @@ cocktail_id
         "ingredient": "Cognac" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Créme liqueur",
-        "label": "Brown Créme de Cacao" },
+        "ingredient": "Brown Créme de Cacao" },
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Cream" }
@@ -665,8 +646,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Vodka",
-        "label": "Citron Vodka" },
+        "ingredient": "Citron vodka" },
       { "unit": "cl",
         "amount": 2,
         "ingredient": "Triple Sec" },
@@ -735,12 +715,10 @@ cocktail_id
         "ingredient": "Dark rum" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Triple Sec",
-        "label": "Orange Curaçao" },
+        "ingredient": "Orange Curaçao" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Syrup",
-        "label": "Orgeat syrup" },
+        "ingredient": "Orgeat syrup" },
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Lime juice" }
@@ -753,8 +731,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Dark rum",
-        "label": "Gold rum" },
+        "ingredient": "Gold rum" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Galliano" },
@@ -830,8 +807,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Whiskey",
-        "label": "Irish whiskey" },
+        "ingredient": "Irish Whiskey" },
       { "unit": "cl",
         "amount": 9,
         "ingredient": "Hot coffee" },
@@ -865,8 +841,7 @@ cocktail_id
         "ingredient": "Campari" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Vermouth",
-        "label": "Red vermouth" },
+        "ingredient": "Red vermouth" },
       { "special": "A splash of soda water" }
     ],
     "garnish": "Half an orange slice",
@@ -883,8 +858,7 @@ cocktail_id
         "ingredient": "Cherry liqueur" },
       { "unit": "cl",
         "amount": 0.75,
-        "ingredient": "Triple Sec",
-        "label": "Cointreau" },
+        "ingredient": "Triple Sec" },
       { "unit": "cl",
         "amount": 0.75,
         "ingredient": "DOM Bénédictine" },
@@ -896,8 +870,7 @@ cocktail_id
         "ingredient": "Lime juice" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Grenadine" },
+        "ingredient": "Grenadine syrup" },
       { "special": "1 dash Angostura bitters" }
     ],
     "garnish": "Pineapple slice and a cherry",
@@ -942,8 +915,7 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" },
+        "ingredient": "Sugar syrup" },
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Soda water" }
@@ -959,8 +931,7 @@ cocktail_id
         "ingredient": "Dry White Wine" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Créme liqueur",
-        "label": "Créme de Cassis" }
+        "ingredient": "Créme de Cassis" }
     ],
     "preparation": "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine." },
   { "name": "Mint Julep",
@@ -969,8 +940,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Whiskey",
-        "label": "Bourbon whiskey" },
+        "ingredient": "Bourbon whiskey" },
       { "special": "4 fresh mint sprigs" },
       { "special": "1 teaspoon powdered sugar" },
       { "special": "2 teaspoons water" }
@@ -1014,8 +984,7 @@ cocktail_id
         "ingredient": "Vodka" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Vermouth",
-        "label": "Dry vermouth" },
+        "ingredient": "Dry vermouth" },
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Olive juice" }
@@ -1046,15 +1015,13 @@ cocktail_id
         "ingredient": "White rum" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Cherry liqueur",
-        "label": "Maraschino" },
+        "ingredient": "Maraschino cherry liqueur" },
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Pineapple juice" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Grenadine" }
+        "ingredient": "Grenadine syrup" }
     ],
     "preparation": "Shake and strain into a chilled large cocktail glass." },
   { "name": "Hemingway Special",
@@ -1069,8 +1036,7 @@ cocktail_id
         "ingredient": "Grapefruit juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Cherry liqueur",
-        "label": "Maraschino" },
+        "ingredient": "Maraschino cherry liqueur" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lime juice" }
@@ -1104,8 +1070,7 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" },
+        "ingredient": "Sugar syrup" },
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Cream" },
@@ -1127,12 +1092,10 @@ cocktail_id
         "ingredient": "Lemon juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Créme liqueur",
-        "label": "Créme de Cassis" },
+        "ingredient": "Créme de Cassis" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Syrup",
-        "label": "Sugar syrup" }
+        "ingredient": "Sugar syrup" }
     ],
     "garnish": "Lemon slice and a blackberry",
     "preparation": "Shake the ingredients and pour into highball glass. Top with Sparkling wine." },
@@ -1141,8 +1104,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Whiskey",
-        "label": "Scotch whisky" },
+        "ingredient": "Scotch whisky" },
       { "unit": "cl",
         "amount": 3.5,
         "ingredient": "DiSaronno" }
@@ -1154,12 +1116,10 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Vodka",
-        "label": "Citron Vodka" },
+        "ingredient": "Citron vodka" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Triple Sec",
-        "label": "Cointreau" },
+        "ingredient": "Triple Sec" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lime juice" },
@@ -1178,8 +1138,7 @@ cocktail_id
         "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Vermouth",
-        "label": "Dry vermouth" }
+        "ingredient": "Dry vermouth" }
     ],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive." },
   { "name": "Between the Sheets",
@@ -1206,12 +1165,10 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Gin",
-        "label": "Old Tom Gin" },
+        "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Cherry liqueur",
-        "label": "Maraschino" },
+        "ingredient": "Maraschino cherry liqueur" },
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Orange Bitters" },
@@ -1237,8 +1194,7 @@ cocktail_id
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Tequila",
-        "label": "Silver Tequila" },
+        "ingredient": "Silver Tequila" },
       { "unit": "cl",
         "amount": 7,
         "ingredient": "Tomato juice" },
