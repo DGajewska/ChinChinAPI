@@ -14,7 +14,8 @@
         "ingredient": "Lillet Blonde" }
     ],
     "garnish": ["Lemon twist"],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/vesper.jpg" },
   { "name": "Bacardi",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
@@ -29,7 +30,8 @@
         "amount": 1,
         "ingredient": "Grenadine syrup" }
     ],
-    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/bacardi.jpg" },
   { "name": "Negroni",
     "glass": "old-fashioned",
     "category": "Before Dinner Cocktail",
@@ -45,7 +47,8 @@
         "ingredient": "Sweet red vermouth" }
     ],
     "garnish": ["Half an orange slice"],
-    "preparation": "Build into old-fashioned glass filled with ice. Stir gently." },
+    "preparation": "Build into old-fashioned glass filled with ice. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/negroni.jpg" },
   { "name": "Rose",
     "glass": "martini",
     "ingredients": [
@@ -59,14 +62,15 @@
         "amount": 3,
         "ingredient": "Strawberry syrup"}
     ],
-    "preparation": "Stir all ingredients with ice and strain into a cocktail glass." },
+    "preparation": "Stir all ingredients with ice and strain into a cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/rose.jpg" },
   { "name": "Old Fashioned",
     "glass": "old-fashioned",
     "category": "Before Dinner Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Bourbon or rye Whiskey" },
+        "ingredient": "Bourbon whiskey" },
       { "unit": "dashes",
         "amount": 2,
         "ingredient": "Angostura Bitters"},
@@ -77,7 +81,8 @@
         "ingredient": "Water" }
     ],
     "garnish": ["Orange slice", "Cherry"],
-    "preparation": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky." },
+    "preparation": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/old_fashioned.jpg" },
   { "name": "Tuxedo",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -89,17 +94,18 @@
         "amount": 3,
         "ingredient": "Dry vermouth" },
       { "unit": "bar spoon",
-        "amount": 1/2,
-        "ingredient": "Maraschino"},
+        "amount": 0.5,
+        "ingredient": "Maraschino cherry liqueur"},
       { "unit": "bar spoon",
-        "amount": 1/4,
+        "amount": 0.25,
         "ingredient": "Absinthe"},
       { "unit": "dashes",
         "amount": 3,
         "ingredient": "Orange Bitters" }
     ],
     "garnish": ["Cherry", "Lemon twist"],
-    "preparation": "Stir all ingredients with ice and strain into cocktail glass." },
+    "preparation": "Stir all ingredients with ice and strain into cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/tuxedo.jpg" },
   { "name": "Mojito",
     "glass": "collins",
     "category": "Longdrink",
@@ -115,11 +121,12 @@
         "ingredient": "Mint" },
       { "unit": "teaspoons",
         "amount": 1,
-        "ingredient": "White sugar },
+        "ingredient": "White sugar" },
       { "ingredient": "Soda water" }
     ],
     "garnish": ["Mint leaves", "Lemon slice"],
-    "preparation": "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw." },
+    "preparation": "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/mojito.jpg" },
   { "name": "Horse's Neck",
     "glass": "highball",
     "category": "Longdrink",
@@ -135,7 +142,8 @@
         "ingredient": "Angostura bitters" }
     ],
     "garnish": "Lemon twist",
-    "preparation": "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters." },
+    "preparation": "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/horse_neck.jpg" },
   { "name": "Planter's Punch",
     "glass": "highball",
     "category": "Longdrink",
@@ -163,7 +171,8 @@
         "ingredient": "Angostura bitters" }
     ],
     "garnish": ["Pineapple slice", "Cherry"],
-    "preparation": "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”." },
+    "preparation": "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/planters_punch.jpg" },
   { "name": "Sea Breeze",
     "glass": "highball",
     "category": "Longdrink",
@@ -179,7 +188,8 @@
         "ingredient": "Grapefruit juice" }
     ],
     "garnish": "Lime wedge",
-    "preparation": "Build all ingredients in a rock glass filled with ice." },
+    "preparation": "Build all ingredients in a rock glass filled with ice.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/sea_breeze.jpg" },
   { "name": "Pisco Sour",
     "glass": "old-fashioned",
     "category": "All Day Cocktail",
@@ -193,10 +203,12 @@
       { "unit": "cl",
         "amount": 2,
         "ingredient": "Sugar syrup" },
-        { "amount": 1,
-          "ingredient": "raw egg white (small egg)" }
+      { "unit": "small egg",
+        "amount": 1,
+        "ingredient": "Egg white" }
     ],
-    "preparation": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top." },
+    "preparation": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/pisco_sour.jpg" },
   { "name": "Long Island Iced Tea",
     "glass": "highball",
     "category": "Longdrink",
@@ -227,7 +239,8 @@
         "ingredient": "Cola" }
     ],
     "garnish": ["Lemon twist"],
-    "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw." },
+    "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/long_island_tea.jpg" },
   { "name": "Clover Club",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -237,14 +250,15 @@
         "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": Raspberry syrup" },
+        "ingredient": "Raspberry syrup" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" },
       { "unit": "drops",
         "ingredient": "Egg White" }
     ],
-    "preparation": "Shake with ice cubes. Strain into cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/clover_club.jpg" },
   { "name": "Angel Face",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -259,7 +273,8 @@
         "amount": 3,
         "ingredient": "Calvados" }
     ],
-    "preparation": "Shake with ice cubes. Strain into a cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into a cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/angel_face.jpg" },
   { "name": "Mimosa",
     "glass": "champagne-flute",
     "category": "Sparkling Cocktail",
@@ -272,7 +287,8 @@
         "ingredient": "Orange juice" }
     ],
     "garnish": ["Orange twist"],
-    "preparation": "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink." },
+    "preparation": "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/mimosa.jpg" },
   { "name": "Whiskey Sour",
     "glass": "old-fashioned",
     "category": "Before Dinner Cocktail",
@@ -288,7 +304,8 @@
         "ingredient": "Sugar syrup" }
     ],
     "garnish": "Half an orange slice and cherry",
-    "preparation": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice." },
+    "preparation": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/whiskey_sour.jpg" },
   { "name": "Screwdriver",
     "glass": "highball",
     "category": "All Day Cocktail",
@@ -301,7 +318,8 @@
         "ingredient": "Orange juice" }
     ],
     "garnish": ["Orange slice"],
-    "preparation": "Build into a highball glass filled with ice. Stir gently." },
+    "preparation": "Build into a highball glass filled with ice. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/screwdriver.jpg" },
   { "name": "Cuba Libre",
     "glass": "highball",
     "category": "Longdrink",
@@ -316,8 +334,9 @@
         "amount": 1,
         "ingredient": "Lime juice" }
     ],
-    "garnish": "Lime wedge",
-    "preparation": "Build all ingredients in a highball glass filled with ice." },
+    "garnish": ["Lime wedge"],
+    "preparation": "Build all ingredients in a highball glass filled with ice.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/cuba_libre.jpg" },
   { "name": "Manhattan",
     "glass": "martini",
     "category": "Before Dinner cocktail",
@@ -333,7 +352,8 @@
         "ingredient": "Angostura Bitters"}
     ],
     "garnish": ["Cherry"],
-    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/manhattan.jpg" },
   { "name": "Porto Flip",
     "glass": "martini",
     "category": "After Dinner Cocktail",
@@ -348,7 +368,8 @@
         "amount": 1,
         "ingredient": "Egg yolk" }
     ],
-    "preparation": "Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg." },
+    "preparation": "Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/porto_flip.jpg" },
   { "name": "Gin Fizz",
     "glass": "highball",
     "category": "Longdrink",
@@ -367,7 +388,8 @@
         "ingredient": "Soda water" }
     ],
     "garnish": ["Lemon slice"],
-    "preparation": "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water." },
+    "preparation": "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/gin_fizz.jpg" },
   { "name": "Espresso Martini",
     "glass": "martini",
     "category": "After Dinner Cocktail",
@@ -382,7 +404,8 @@
       { "amount": 1,
         "ingredient": "short strong Espresso" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/espresso_martini.jpg" },
   { "name": "Margarita",
     "glass": "margarita",
     "category": "All Day Cocktail",
@@ -397,7 +420,8 @@
         "amount": 1.5,
         "ingredient": "Lime juice" }
     ],
-    "preparation": "Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe)." },
+    "preparation": "Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/margarita.jpg" },
   { "name": "French 75",
     "glass": "champagne-tulip",
     "category": "Sparkling Cocktail",
@@ -415,7 +439,8 @@
         "amount": 6,
         "ingredient": "Champagne" }
     ],
-    "preparation": "Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently." },
+    "preparation": "Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/french75.jpg" },
   { "name": "Yellow Bird",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -433,7 +458,8 @@
         "amount": 1.5,
         "ingredient": "Lime juice" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/yellow_bird.jpg" },
   { "name": "Pina Colada",
     "glass": "hurricane",
     "category": "Longdrink",
@@ -449,7 +475,8 @@
         "ingredient": "Coconut milk" }
     ],
     "garnish": ["Pineapple slice", "Cherry"],
-    "preparation": "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws." },
+    "preparation": "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/pina_colada.jpg" },
   { "name": "Aviation",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -459,12 +486,13 @@
         "ingredient": "Gin" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Maraschino Cherry liqueur" },
+        "ingredient": "Maraschino cherry liqueur" },
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/aviation.jpg" },
   { "name": "Bellini",
     "glass": "champagne-flute",
     "category": "Sparkling Cocktail",
@@ -476,7 +504,8 @@
         "amount": 5,
         "ingredient": "Peach puree" }
     ],
-    "preparation": "Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)" },
+    "preparation": "Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/bellini.jpg" },
   { "name": "Grasshopper",
     "glass": "martini",
     "category": "After Dinner Cocktail",
@@ -491,7 +520,8 @@
         "amount": 3,
         "ingredient": "Cream" }
     ],
-    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/grasshopper.jpg" },
   { "name": "Tequila Sunrise",
     "glass": "highball",
     "category": "Longdrink",
@@ -507,7 +537,8 @@
         "ingredient": "Grenadine syrup" }
     ],
     "garnish": ["Orange slice", "Cherry"],
-    "preparation": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir." },
+    "preparation": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/tequila_sunrise.jpg" },
   { "name": "Daiquiri",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
@@ -520,9 +551,10 @@
         "ingredient": "Lime juice" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Simple syrup" }
+        "ingredient": "Sugar syrup" }
     ],
-    "preparation": "Shake and strain into a cocktail glass." },
+    "preparation": "Shake and strain into a cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/daquiri.jpg" },
   { "name": "Rusty Nail",
     "glass": "old-fashioned",
     "category": "After Dinner Cocktail",
@@ -535,7 +567,8 @@
         "ingredient": "Drambuie" }
     ],
     "garnish": ["Lemon twist"],
-    "preparation": "Build into old-fashioned glass filled with ice. Stir gently." },
+    "preparation": "Build into old-fashioned glass filled with ice. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/rusty_nail.jpg" },
   { "name": "B52",
     "glass": "shot",
     "category": "After Dinner",
@@ -550,7 +583,8 @@
         "amount": 2,
         "ingredient": "Triple Sec" }
     ],
-    "preparation": "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate." },
+    "preparation": "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/b52.jpg" },
   { "name": "Stinger",
     "glass": "martini",
     "category": "After Dinner Cocktail",
@@ -562,7 +596,8 @@
         "amount": 2,
         "ingredient": "White Créme de Menthe" }
     ],
-    "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass." },
+    "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/stinger.jpg" },
   { "name": "Golden Dream",
     "glass": "martini",
     "category": "After Dinner Cocktail",
@@ -580,7 +615,8 @@
         "amount": 1,
         "ingredient": "Cream" }
     ],
-    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/golden_dream.jpg" },
   { "name": "God Mother",
     "glass": "old-fashioned",
     "ingredients": [
@@ -591,7 +627,8 @@
         "amount": 3.5,
         "ingredient": "DiSaronno" }
     ],
-    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently." },
+    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/godfather.jpg" },
   { "name": "Spritz Veneziano",
     "glass": "old-fashioned",
     "category": "Sparkling Cocktail",
@@ -606,7 +643,8 @@
         "ingredient": "Soda water" }
     ],
     "garnish": ["Half an orange slice"],
-    "preparation": "Build into an old-fashioned glass filled with ice. Top with a splash of soda water." },
+    "preparation": "Build into an old-fashioned glass filled with ice. Top with a splash of soda water.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/spritz_veneziano.jpg" },
   { "name": "Bramble",
     "glass": "old-fashioned",
     "category": "All Day Cocktail",
@@ -625,7 +663,8 @@
         "ingredient": "Blackberry liqueur" }
     ],
     "garnish": ["Lemon slice", "Blackberries"],
-    "preparation": "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion." },
+    "preparation": "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/bramble.jpg" },
   { "name": "Alexander",
     "glass": "martini",
     "ingredients": [
@@ -639,7 +678,8 @@
         "amount": 3,
         "ingredient": "Cream" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg." },
+    "preparation": "Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/alexander.jpg" },
   { "name": "Lemon Drop Martini",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -655,7 +695,8 @@
         "ingredient": "Lemon juice" }
     ],
     "garnish": ["Lemon slice"],
-    "preparation": "Shake and strain into a chilled cocktail glass rimmed with sugar." },
+    "preparation": "Shake and strain into a chilled cocktail glass rimmed with sugar.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/lemon_drop.jpg" },
   { "name": "French Martini",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
@@ -670,7 +711,8 @@
         "amount": 1.5,
         "ingredient": "Pineapple juice" }
     ],
-    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink." },
+    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/french_martini.jpg" },
   { "name": "Black Russian",
     "glass": "old-fashioned",
     "category": "After Dinner Cocktail",
@@ -682,7 +724,8 @@
         "amount": 2,
         "ingredient": "Coffee liqueur" }
     ],
-    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently." },
+    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/black_russian.jpg" },
   { "name": "Bloody Mary",
     "glass": "highball",
     "category": "Longdrink",
@@ -704,7 +747,8 @@
       { "ingredient": "Pepper" }
     ],
     "garnish": ["Celery", "Lemon wedge"],
-    "preparation": "Stir gently, pour all ingredients into highball glass." },
+    "preparation": "Stir gently, pour all ingredients into highball glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/bloody_mary.jpg" },
   { "name": "Mai-tai",
     "glass": "highball",
     "category": "Longdrink",
@@ -726,7 +770,8 @@
         "ingredient": "Lime juice" }
     ],
     "garnish": ["Pineapple spear", "Mint leaves", "Lime wedge"],
-    "preparation": "Shake and strain into highball glass. Serve with straw." },
+    "preparation": "Shake and strain into highball glass. Serve with straw.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/mai_tai.jpg" },
   { "name": "Barracuda",
     "glass": "margarita",
     "category": "Sparkling Cocktail",
@@ -744,8 +789,9 @@
         "amount": 1,
         "ingredient": "Lime juice" },
       { "ingredient": "Prosecco" }
-    ]
-    "preparation": "Shake all ingredients aside from Prosecco. Pour into glass and top with Prosecco."
+    ],
+    "preparation": "Shake all ingredients aside from Prosecco. Pour into glass and top with Prosecco.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/baracuda.jpg"
     },
   { "name": "Sex on the Beach",
     "glass": "highball",
@@ -765,7 +811,8 @@
         "ingredient": "Orange juice" }
     ],
     "garnish": ["Orange slice"],
-    "preparation": "Build all ingredients in a highball glass filled with ice." },
+    "preparation": "Build all ingredients in a highball glass filled with ice.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/sex_on_beach.jpg" },
   { "name": "Monkey Gland",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -783,7 +830,8 @@
         "amount": 2,
         "ingredient": "Grenadine" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/monkey_gland.jpg" },
   { "name": "Derby",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -799,7 +847,8 @@
         "ingredient": "Mint leaves" }
     ],
     "garnish": ["Mint leaves"],
-    "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass." },
+    "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/derby.jpg" },
   { "name": "Sidecar",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -814,7 +863,8 @@
         "amount": 2,
         "ingredient": "Lemon juice" }
     ],
-    "preparation": "Shake with ice cubes. Strain into cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/sidecar.jpg" },
   { "name": "Irish Coffee",
     "glass": "hot-drink",
     "category": "Hot Drink",
@@ -832,7 +882,8 @@
         "amount": 1,
         "ingredient": "Brown sugar" }
     ],
-    "preparation": "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top." },
+    "preparation": "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2016/02/irish_coffee.jpg" },
   { "name": "Sazerac",
     "glass": "old-fashioned",
     "category": "After Dinner Cocktail",
@@ -851,7 +902,8 @@
         "ingredient": "Peychaud’s bitters" }
     ],
     "garnish": ["Lemon twist"],
-    "preparation": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain." },
+    "preparation": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/sazerac.jpg" },
   { "name": "Americano",
     "glass": "old-fashioned",
     "category": "Before Dinner Cocktail",
@@ -866,7 +918,8 @@
         "ingredient": "Soda water" }
     ],
     "garnish": ["Half an orange slice"],
-    "preparation": "Build into old fashioned glass filled with ice cubes. Add a splash of soda water." },
+    "preparation": "Build into old fashioned glass filled with ice cubes. Add a splash of soda water.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/americano.jpg" },
   { "name": "Singapore Sling",
     "glass": "highball",
     "category": "Longdrink",
@@ -897,7 +950,8 @@
         "ingredient": "Angostura Bitters"}
     ],
     "garnish": ["Pineapple slice", "Cherry"],
-    "preparation": "Shake with ice cubes. Strain into highball glass." },
+    "preparation": "Shake with ice cubes. Strain into highball glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/singapore_sling.jpg" },
   { "name": "French Connection",
     "glass": "old-fashioned",
     "ingredients": [
@@ -908,7 +962,8 @@
         "amount": 3.5,
         "ingredient": "DiSaronno" }
     ],
-    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently." },
+    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/french_connection.jpg" },
   { "name": "Moscow Mule",
     "glass": "highball",
     "category": "Longdrink",
@@ -924,7 +979,8 @@
         "ingredient": "Lime juice" }
     ],
     "garnish": ["Lime slice"],
-    "preparation": "Combine the vodka and ginger beer. Add lime juice." },
+    "preparation": "Combine the vodka and ginger beer. Add lime juice.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/moscow_mule.jpg" },
   { "name": "John Collins",
     "glass": "highball",
     "category": "Longdrink",
@@ -943,7 +999,8 @@
         "ingredient": "Soda water" }
     ],
     "garnish": ["Lemon slice", "Cherry"],
-    "preparation": "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)" },
+    "preparation": "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/john_collins.jpg" },
   { "name": "Kir",
     "glass": "white-wine",
     "category": "Before Dinner Cocktail",
@@ -955,7 +1012,8 @@
         "amount": 1,
         "ingredient": "Créme de Cassis" }
     ],
-    "preparation": "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine." },
+    "preparation": "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/kir.jpg" },
   { "name": "Mint Julep",
     "glass": "highball",
     "category": "Longdrink",
@@ -974,7 +1032,8 @@
         "ingredient": "Water" }
     ],
     "garnish": ["Mint spring"],
-    "preparation": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost." },
+    "preparation": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/mint_julep.jpg" },
   { "name": "Tommy's Margarita",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -989,7 +1048,8 @@
         "amount": 2,
         "ingredient": "Agave nectar" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/tommy_margarita.jpg" },
   { "name": "Paradise",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1004,7 +1064,8 @@
         "amount": 1.5,
         "ingredient": "Orange juice" }
     ],
-    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/paradise.jpg" },
   { "name": "Dirty Martini",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
@@ -1020,7 +1081,8 @@
         "ingredient": "Olive juice" }
     ],
     "garnish": ["Green olive"],
-    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass." },
+    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/dirty_martini.jpg" },
   { "name": "Champagne Cocktail",
     "glass": "champagne-flute",
     "category": "Sparkling Cocktail",
@@ -1039,7 +1101,8 @@
         "ingredient": "Sugar"}
     ],
     "garnish": ["Orange slice", "Cherry"],
-    "preparation": "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne." },
+    "preparation": "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/champagne_cocktail.jpg" },
   { "name": "Mary Pickford",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1057,7 +1120,8 @@
         "amount": 1,
         "ingredient": "Grenadine syrup" }
     ],
-    "preparation": "Shake and strain into a chilled large cocktail glass." },
+    "preparation": "Shake and strain into a chilled large cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/mary_pickford.jpg" },
   { "name": "Hemingway Special",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1075,7 +1139,8 @@
         "amount": 1.5,
         "ingredient": "Lime juice" }
     ],
-    "preparation": "Shake with ice cubes. Strain into a double cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into a double cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2016/02/hemingway_special.jpg" },
   { "name": "Dark 'n' Stormy",
     "glass": "highball",
     "category": "Longdrink",
@@ -1088,7 +1153,8 @@
         "ingredient": "Ginger beer" }
     ],
     "garnish": ["Lime wedge"],
-    "preparation": "Build into highball glass filled with ice. Add rum first and top it with ginger beer." },
+    "preparation": "Build into highball glass filled with ice. Add rum first and top it with ginger beer.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/dark_stormy.jpg" },
   { "name": "Ramos Fizz",
     "glass": "highball",
     "category": "Longdrink",
@@ -1118,7 +1184,8 @@
         "ingredient": "Vanilla extract" },
       { "ingredient": "Soda water" }
     ],
-    "preparation": "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda." },
+    "preparation": "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/ramos_fizz.jpg" },
   { "name": "Russian Spring Punch",
     "glass": "highball",
     "category": "Sparkling Cocktail",
@@ -1137,7 +1204,8 @@
         "ingredient": "Sugar syrup" }
     ],
     "garnish": ["Lemon slice", "Blackberry"],
-    "preparation": "Shake the ingredients and pour into highball glass. Top with Sparkling wine." },
+    "preparation": "Shake the ingredients and pour into highball glass. Top with Sparkling wine.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/russian_spring.jpg" },
   { "name": "God Father",
     "glass": "old-fashioned",
     "ingredients": [
@@ -1148,7 +1216,8 @@
         "amount": 3.5,
         "ingredient": "DiSaronno" }
     ],
-    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently." },
+    "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/godfather.jpg" },
   { "name": "Cosmopolitan",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1167,7 +1236,8 @@
         "ingredient": "Cranberry juice" }
     ],
     "garnish": ["Lime slice"],
-    "preparation": "Shake with ice cubes. Strain into a large cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into a large cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/cosmopolitan.jpg" },
   { "name": "Dry Martini",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
@@ -1179,7 +1249,8 @@
         "amount": 1,
         "ingredient": "Dry vermouth" }
     ],
-    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive." },
+    "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/dry_martini.jpg" },
   { "name": "Between the Sheets",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1197,7 +1268,8 @@
         "amount": 2,
         "ingredient": "Lemon juice" }
     ],
-    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/between_sheets.jpg" },
   { "name": "Casino",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1216,7 +1288,8 @@
         "ingredient": "Lemon juice" }
     ],
     "garnish": ["Lemon twist", "Cherry"],
-    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/casino.jpg" },
   { "name": "Caipirinha",
     "glass": "old-fashioned",
     "category": "All Day Cocktail",
@@ -1230,7 +1303,8 @@
         "amount": 2,
         "ingredient": "Sugar" }
     ],
-    "preparation": "Cut lime into 4 wedges. Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca)." },
+    "preparation": "Cut lime into 4 wedges. Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca).",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/caipirinha.jpg" },
   { "name": "Vampiro",
     "glass": "highball",
     "ingredients": [
@@ -1250,8 +1324,8 @@
         "amount": 1,
         "ingredient": "Clear honey" },
       { "unit": "slice",
-        "amount": 1/2,
-        "ingredient": "nion finely chopped" },
+        "amount": 0.5,
+        "ingredient": "Onion finely chopped" },
       { "unit": "slices",
         "ingredient": "Fresh red hot chili peppers" },
         { "unit": "drops",
@@ -1259,7 +1333,8 @@
       { "ingredient": "Salt" }
     ],
     "garnish": ["Lime wedge", "Fresh chili"],
-    "preparation": "Shake with ice cubes. Strain into a highball glass, filled with ice." },
+    "preparation": "Shake with ice cubes. Strain into a highball glass, filled with ice.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/vampiro.jpg" },
   { "name": "Kamikaze",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1274,7 +1349,8 @@
         "amount": 3,
         "ingredient": "Lime juice" }
     ],
-    "preparation": "Shake and strain into a chilled cocktail glass." },
+    "preparation": "Shake and strain into a chilled cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/kamikaze.jpg" },
   { "name": "White Lady",
     "glass": "martini",
     "category": "All Day Cocktail",
@@ -1289,7 +1365,8 @@
         "amount": 2,
         "ingredient": "Lemon juice" }
     ],
-    "preparation": "Shake with ice cubes. Strain into large cocktail glass." },
+    "preparation": "Shake with ice cubes. Strain into large cocktail glass.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/white_lady.jpg" },
   { "name": "Harvey Wallbanger",
     "glass": "highball",
     "category": "All Day Cocktail",
@@ -1305,5 +1382,6 @@
         "ingredient": "Orange juice" }
     ],
     "garnish": ["Orance slice", "Cherry"],
-    "preparation": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top." }
+    "preparation": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top.",
+    "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/harvey_wallbanger.jpg" }
 ]
