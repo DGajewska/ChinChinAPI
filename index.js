@@ -57,6 +57,17 @@ router.post('/cocktails/add', (req, res) =>{
   })
 })
 
+router.post('/garnishes/add', (req, res) => {
+  var newGarnish = new Garnish({ name: req.body.name });
+
+  newGarnish.save((err) =>{
+    if (err){
+      res.send(err);
+    }
+    res.json({ message: 'Garnish added successfully' });
+  })
+})
+
 router.post('/ingredients/add-many', (req, res) => {
   Ingredient.insertMany(req.body.ingredientsList, (err) => {
     if (err){
@@ -72,6 +83,15 @@ router.post('/cocktails/add-many', (req, res) => {
       res.send(err);
     }
     res.json({ message: 'Cocktails added successfully' });
+  });
+})
+
+router.post('/garnishes/add-many', (req, res) => {
+  Garnish.insertMany(req.body.garnishesList, (err) => {
+    if (err){
+      res.send(err);
+    }
+    res.json({ message: 'Garnishes added successfully' });
   });
 })
 
