@@ -1,21 +1,3 @@
-collection: cocktails
-
-_id
-name
-glass
-category
-ingredients: []
-garnish
-preparation
-
-collection: ingredients
-
-_id
-unit
-amount
-ingredient
-cocktail_id
-
 [
   { "name": "Vesper",
     "glass": "martini",
@@ -31,7 +13,7 @@ cocktail_id
         "amount": 0.75,
         "ingredient": "Lillet Blonde" }
     ],
-    "garnish": "Lemon twist",
+    "garnish": ["Lemon twist"],
     "preparation": "Shake and strain into a chilled cocktail glass." },
   { "name": "Bacardi",
     "glass": "martini",
@@ -62,7 +44,7 @@ cocktail_id
         "amount": 3,
         "ingredient": "Sweet red vermouth" }
     ],
-    "garnish": "Half an orange slice",
+    "garnish": ["Half an orange slice"],
     "preparation": "Build into old-fashioned glass filled with ice. Stir gently." },
   { "name": "Rose",
     "glass": "martini",
@@ -73,9 +55,9 @@ cocktail_id
       { "unit": "cl",
         "amount": 4,
         "ingredient": "Dry vermouth"},
-        { "unit": "dashes",
-          "amount": 3,
-          "ingredient": "Strawberry syrup"}
+      { "unit": "dashes",
+        "amount": 3,
+        "ingredient": "Strawberry syrup"}
     ],
     "preparation": "Stir all ingredients with ice and strain into a cocktail glass." },
   { "name": "Old Fashioned",
@@ -85,16 +67,16 @@ cocktail_id
       { "unit": "cl",
         "amount": 4.5,
         "ingredient": "Bourbon or rye Whiskey" },
-        { "unit": "dashes",
-          "amount": 2,
-          "ingredient": "Angostura Bitters"},
-          { "unit": "cube",
-            "amount": 1,
-            "ingredient": "Sugar"},
-            { "unit": "dashes",
-              "ingredient": "Water" }
+      { "unit": "dashes",
+        "amount": 2,
+        "ingredient": "Angostura Bitters"},
+      { "unit": "cube",
+        "amount": 1,
+        "ingredient": "Sugar"},
+      { "unit": "dashes",
+        "ingredient": "Water" }
     ],
-    "garnish": "Orange slice and cherry",
+    "garnish": ["Orange slice", "Cherry"],
     "preparation": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky." },
   { "name": "Tuxedo",
     "glass": "martini",
@@ -106,17 +88,17 @@ cocktail_id
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Dry vermouth" },
-        { "unit": "bar spoon",
-          "amount": 1/2,
-          "ingredient": "Maraschino"},
-          { "unit": "bar spoon",
-            "amount": 1/4,
-            "ingredient": "Absinthe"},
-            { "unit": "dashes",
-              "amount": 3,
-              "ingredient": "Orange Bitters" }
+      { "unit": "bar spoon",
+        "amount": 1/2,
+        "ingredient": "Maraschino"},
+      { "unit": "bar spoon",
+        "amount": 1/4,
+        "ingredient": "Absinthe"},
+      { "unit": "dashes",
+        "amount": 3,
+        "ingredient": "Orange Bitters" }
     ],
-    "garnish": "Cherry and lemon twist",
+    "garnish": ["Cherry", "Lemon twist"],
     "preparation": "Stir all ingredients with ice and strain into cocktail glass." },
   { "name": "Mojito",
     "glass": "collins",
@@ -128,11 +110,15 @@ cocktail_id
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Lime juice" },
-      { "special": "6 Mint sprigs" },
-      { "special": "2 teaspoons white sugar" },
-      { "special": "Soda water" }
+      { "unit": "sprigs",
+        "amount": 6,
+        "ingredient": "Mint" },
+      { "unit": "teaspoons",
+        "amount": 1,
+        "ingredient": "White sugar },
+      { "ingredient": "Soda water" }
     ],
-    "garnish": "Mint leaves and lemon slice",
+    "garnish": ["Mint leaves", "Lemon slice"],
     "preparation": "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw." },
   { "name": "Horse's Neck",
     "glass": "highball",
@@ -144,7 +130,9 @@ cocktail_id
       { "unit": "cl",
         "amount": 12,
         "ingredient": "Ginger Ale" },
-      { "special": "Dash of Angostura bitters (optional)" }
+      { "unit": "dash",
+        "amount": 1,
+        "ingredient": "Angostura bitters" }
     ],
     "garnish": "Lemon twist",
     "preparation": "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters." },
@@ -170,9 +158,11 @@ cocktail_id
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Sugar syrup" },
-      { "special": "3 to 4 dashes Angostura bitters" }
+      { "unit": "dash",
+        "amount": 3,
+        "ingredient": "Angostura bitters" }
     ],
-    "garnish": "Pineapple slice and a cherry",
+    "garnish": ["Pineapple slice", "Cherry"],
     "preparation": "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”." },
   { "name": "Sea Breeze",
     "glass": "highball",
@@ -203,7 +193,8 @@ cocktail_id
       { "unit": "cl",
         "amount": 2,
         "ingredient": "Sugar syrup" },
-      { "special": "1 raw egg white (small egg)" }
+        { "amount": 1,
+          "ingredient": "raw egg white (small egg)" }
     ],
     "preparation": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top." },
   { "name": "Long Island Iced Tea",
@@ -231,9 +222,11 @@ cocktail_id
       { "unit": "cl",
         "amount": 3.0,
         "ingredient": "Gomme syrup" },
-      { "special": "1 dash of Cola" }
+      { "unit": "dash",
+        "amount": 1,
+        "ingredient": "Cola" }
     ],
-    "garnish": "Lemon twist",
+    "garnish": ["Lemon twist"],
     "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw." },
   { "name": "Clover Club",
     "glass": "martini",
@@ -248,7 +241,8 @@ cocktail_id
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" },
-      { "special": "Few drops of Egg White" }
+      { "unit": "drops",
+        "ingredient": "Egg White" }
     ],
     "preparation": "Shake with ice cubes. Strain into cocktail glass." },
   { "name": "Angel Face",
@@ -277,7 +271,7 @@ cocktail_id
         "amount": 7.5,
         "ingredient": "Orange juice" }
     ],
-    "garnish": "Optional orange twist",
+    "garnish": ["Orange twist"],
     "preparation": "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink." },
   { "name": "Whiskey Sour",
     "glass": "old-fashioned",
@@ -306,7 +300,7 @@ cocktail_id
         "amount": 10,
         "ingredient": "Orange juice" }
     ],
-    "garnish": "Orange slice",
+    "garnish": ["Orange slice"],
     "preparation": "Build into a highball glass filled with ice. Stir gently." },
   { "name": "Cuba Libre",
     "glass": "highball",
@@ -334,9 +328,11 @@ cocktail_id
       { "unit": "cl",
         "amount": 2,
         "ingredient": "Red vermouth"},
-      { "special": "1 dash Angostura Bitters" }
+      { "unit": "dash",
+        "amount": 1,
+        "ingredient": "Angostura Bitters"}
     ],
-    "garnish": "Cherry",
+    "garnish": ["Cherry"],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass." },
   { "name": "Porto Flip",
     "glass": "martini",
@@ -370,7 +366,7 @@ cocktail_id
         "amount": 8,
         "ingredient": "Soda water" }
     ],
-    "garnish": "Lemon slice",
+    "garnish": ["Lemon slice"],
     "preparation": "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water." },
   { "name": "Espresso Martini",
     "glass": "martini",
@@ -382,8 +378,9 @@ cocktail_id
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Coffee liqueur" },
-      { "special": "Sugar syrup (according to individual preference of sweetness)" },
-      { "special": "1 short strong Espresso" }
+      { "ingredient": "Sugar syrup" },
+      { "amount": 1,
+        "ingredient": "short strong Espresso" }
     ],
     "preparation": "Shake and strain into a chilled cocktail glass." },
   { "name": "Margarita",
@@ -411,7 +408,9 @@ cocktail_id
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" },
-      { "special": "2 dashes Sugar syrup" },
+      { "unit": "dashes",
+        "amount": 2,
+        "ingredient": "Sugar syrup" },
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Champagne" }
@@ -449,7 +448,7 @@ cocktail_id
         "amount": 3,
         "ingredient": "Coconut milk" }
     ],
-    "garnish": "Pineapple slice and a cherry",
+    "garnish": ["Pineapple slice", "Cherry"],
     "preparation": "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws." },
   { "name": "Aviation",
     "glass": "martini",
@@ -507,7 +506,7 @@ cocktail_id
         "amount": 1.5,
         "ingredient": "Grenadine syrup" }
     ],
-    "garnish": "Orange slice and a cherry",
+    "garnish": ["Orange slice", "Cherry"],
     "preparation": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir." },
   { "name": "Daiquiri",
     "glass": "martini",
@@ -535,7 +534,7 @@ cocktail_id
         "amount": 2.5,
         "ingredient": "Drambuie" }
     ],
-    "garnish": "Lemon twist",
+    "garnish": ["Lemon twist"],
     "preparation": "Build into old-fashioned glass filled with ice. Stir gently." },
   { "name": "B52",
     "glass": "shot",
@@ -603,9 +602,10 @@ cocktail_id
       { "unit": "cl",
         "amount": 4,
         "ingredient": "Aperol" },
-      { "special": "Splash of Soda water" }
+      { "unit": "splash",
+        "ingredient": "Soda water" }
     ],
-    "garnish": "Half an orange slice",
+    "garnish": ["Half an orange slice"],
     "preparation": "Build into an old-fashioned glass filled with ice. Top with a splash of soda water." },
   { "name": "Bramble",
     "glass": "old-fashioned",
@@ -624,7 +624,7 @@ cocktail_id
         "amount": 1.5,
         "ingredient": "Blackberry liqueur" }
     ],
-    "garnish": "Lemon slice and two blackberries",
+    "garnish": ["Lemon slice", "Blackberries"],
     "preparation": "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion." },
   { "name": "Alexander",
     "glass": "martini",
@@ -654,7 +654,7 @@ cocktail_id
         "amount": 1.5,
         "ingredient": "Lemon juice" }
     ],
-    "garnish": "Lemon slice",
+    "garnish": ["Lemon slice"],
     "preparation": "Shake and strain into a chilled cocktail glass rimmed with sugar." },
   { "name": "French Martini",
     "glass": "martini",
@@ -696,12 +696,14 @@ cocktail_id
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lemon juice" },
-      { "special": "2 to 3 dashes of Worcestershire Sauce" },
-      { "special": "Tabasco" },
-      { "special": "Celery salt" },
-      { "special": "Pepper" }
+      { "unit": "dashes",
+        "amount": 2,
+        "ingredient": "Worcestershire Sauce" },
+      { "ingredient": "Tabasco" },
+      { "ingredient": "Celery salt" },
+      { "ingredient": "Pepper" }
     ],
-    "garnish": "Celery and optionally lemon wedge",
+    "garnish": ["Celery", "Lemon wedge"],
     "preparation": "Stir gently, pour all ingredients into highball glass." },
   { "name": "Mai-tai",
     "glass": "highball",
@@ -723,7 +725,7 @@ cocktail_id
         "amount": 1,
         "ingredient": "Lime juice" }
     ],
-    "garnish": "Pineapple spear, mint leaves and lime wedge",
+    "garnish": ["Pineapple spear", "Mint leaves", "Lime wedge"],
     "preparation": "Shake and strain into highball glass. Serve with straw." },
   { "name": "Barracuda",
     "glass": "margarita",
@@ -738,9 +740,13 @@ cocktail_id
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Pineapple juice" },
-      { "special": "1 dash Lime juice" },
-      { "special": "Top with Prosecco" }
-    ] },
+      { "unit": "dash",
+        "amount": 1,
+        "ingredient": "Lime juice" },
+      { "ingredient": "Prosecco" }
+    ]
+    "preparation": "Shake all ingredients aside from Prosecco. Pour into glass and top with Prosecco."
+    },
   { "name": "Sex on the Beach",
     "glass": "highball",
     "category": "Longdrink",
@@ -758,7 +764,7 @@ cocktail_id
         "amount": 4,
         "ingredient": "Orange juice" }
     ],
-    "garnish": "Orange slice",
+    "garnish": ["Orange slice"],
     "preparation": "Build all ingredients in a highball glass filled with ice." },
   { "name": "Monkey Gland",
     "glass": "martini",
@@ -770,8 +776,12 @@ cocktail_id
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Orange juice" },
-      { "special": "2 drops Absinthe" },
-      { "special": "2 drops Grenadine" }
+      { "unit": "drops",
+        "amount": 2,
+        "ingredient": "Absinthe" },
+      { "unit": "drops",
+        "amount": 2,
+        "ingredient": "Grenadine" }
     ],
     "preparation": "Shake and strain into a chilled cocktail glass." },
   { "name": "Derby",
@@ -781,10 +791,14 @@ cocktail_id
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Gin" },
-      { "special": "2 drops Peach Bitters" },
-      { "special": "2 Fresh mint leaves" }
+      { "unit": "drops",
+        "amount": 2,
+        "ingredient": "Peach Bitters" },
+      { "unit": "leaves",
+        "amount": 2,
+        "ingredient": "Mint leaves" }
     ],
-    "garnish": "Mint leaves",
+    "garnish": ["Mint leaves"],
     "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass." },
   { "name": "Sidecar",
     "glass": "martini",
@@ -814,7 +828,9 @@ cocktail_id
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Cream" },
-      { "special": "1 teaspoon of brown sugar" }
+      { "unit": "teaspoon",
+        "amount": 1,
+        "ingredient": "Brown sugar" }
     ],
     "preparation": "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top." },
   { "name": "Sazerac",
@@ -827,10 +843,14 @@ cocktail_id
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Absinthe" },
-      { "special": "1 sugar cube" },
-      { "special": "2 dashes Peychaud’s bitters" }
+      { "unit": "cube",
+        "amount": 1,
+        "ingredient": "Sugar" },
+      { "unit": "dashes",
+        "amount": 2,
+        "ingredient": "Peychaud’s bitters" }
     ],
-    "garnish": "Lemon twist",
+    "garnish": ["Lemon twist"],
     "preparation": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain." },
   { "name": "Americano",
     "glass": "old-fashioned",
@@ -842,9 +862,10 @@ cocktail_id
       { "unit": "cl",
         "amount": 3,
         "ingredient": "Red vermouth" },
-      { "special": "A splash of soda water" }
+      { "unit": "splash",
+        "ingredient": "Soda water" }
     ],
-    "garnish": "Half an orange slice",
+    "garnish": ["Half an orange slice"],
     "preparation": "Build into old fashioned glass filled with ice cubes. Add a splash of soda water." },
   { "name": "Singapore Sling",
     "glass": "highball",
@@ -871,9 +892,11 @@ cocktail_id
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Grenadine syrup" },
-      { "special": "1 dash Angostura bitters" }
+      { "unit": "dash",
+        "amount": 1,
+        "ingredient": "Angostura Bitters"}
     ],
-    "garnish": "Pineapple slice and a cherry",
+    "garnish": ["Pineapple slice", "Cherry"],
     "preparation": "Shake with ice cubes. Strain into highball glass." },
   { "name": "French Connection",
     "glass": "old-fashioned",
@@ -898,10 +921,9 @@ cocktail_id
         "ingredient": "Ginger beer" },
       { "unit": "cl",
         "amount": 0.5,
-        "ingredient": "Lime juice" },
-      { "special": "1 slice lime in a highball glass" }
+        "ingredient": "Lime juice" }
     ],
-    "garnish": "Lime slice",
+    "garnish": ["Lime slice"],
     "preparation": "Combine the vodka and ginger beer. Add lime juice." },
   { "name": "John Collins",
     "glass": "highball",
@@ -920,7 +942,7 @@ cocktail_id
         "amount": 6,
         "ingredient": "Soda water" }
     ],
-    "garnish": "Lemon slice and a cherry",
+    "garnish": ["Lemon slice", "Cherry"],
     "preparation": "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)" },
   { "name": "Kir",
     "glass": "white-wine",
@@ -941,11 +963,17 @@ cocktail_id
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Bourbon whiskey" },
-      { "special": "4 fresh mint sprigs" },
-      { "special": "1 teaspoon powdered sugar" },
-      { "special": "2 teaspoons water" }
+      { "unit": "sprigs",
+        "amount": 4,
+        "ingredient": "Mint" },
+      { "unit": "teaspoon",
+        "amount": 1,
+        "ingredient": "Powdered sugar" },
+      { "unit": "teaspoons",
+        "amount": 2,
+        "ingredient": "Water" }
     ],
-    "garnish": "Mint spring",
+    "garnish": ["Mint spring"],
     "preparation": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost." },
   { "name": "Tommy's Margarita",
     "glass": "martini",
@@ -957,7 +985,9 @@ cocktail_id
       { "unit": "cl",
         "amount": 1.5,
         "ingredient": "Lime juice" },
-      { "special": "2 bar spoons of Agave nectar" }
+      { "unit": "bar spoons",
+        "amount": 2,
+        "ingredient": "Agave nectar" }
     ],
     "preparation": "Shake and strain into a chilled cocktail glass." },
   { "name": "Paradise",
@@ -989,7 +1019,7 @@ cocktail_id
         "amount": 1,
         "ingredient": "Olive juice" }
     ],
-    "garnish": "Green olive",
+    "garnish": ["Green olive"],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass." },
   { "name": "Champagne Cocktail",
     "glass": "champagne-flute",
@@ -1001,10 +1031,14 @@ cocktail_id
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Cognac" },
-      { "special": "2 dashes Angostura Bitters" },
-      { "special": "1 sugar cube" }
+      { "unit": "dashes",
+        "amount": 2,
+        "ingredient": "Angostura Bitters"},
+      { "unit": "cube",
+        "amount": 1,
+        "ingredient": "Sugar"}
     ],
-    "garnish": "Orange slice and a cherry",
+    "garnish": ["Orange slice", "Cherry"],
     "preparation": "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne." },
   { "name": "Mary Pickford",
     "glass": "martini",
@@ -1053,7 +1087,7 @@ cocktail_id
         "amount": 10,
         "ingredient": "Ginger beer" }
     ],
-    "garnish": "Lime wedge",
+    "garnish": ["Lime wedge"],
     "preparation": "Build into highball glass filled with ice. Add rum first and top it with ginger beer." },
   { "name": "Ramos Fizz",
     "glass": "highball",
@@ -1074,10 +1108,15 @@ cocktail_id
       { "unit": "cl",
         "amount": 6,
         "ingredient": "Cream" },
-      { "special": "1 Egg white" },
-      { "special": "3 dashes Orange flower water" },
-      { "special": "2 drops Vanilla extract" },
-      { "special": "Soda water" }
+      { "amount": 1,
+        "ingredient": "Egg white" },
+      { "unit": "dashes",
+        "amount": 3,
+        "ingredient": "Orange flower water" },
+      { "unit": "drops",
+        "amount": 2,
+        "ingredient": "Vanilla extract" },
+      { "ingredient": "Soda water" }
     ],
     "preparation": "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda." },
   { "name": "Russian Spring Punch",
@@ -1097,7 +1136,7 @@ cocktail_id
         "amount": 1,
         "ingredient": "Sugar syrup" }
     ],
-    "garnish": "Lemon slice and a blackberry",
+    "garnish": ["Lemon slice", "Blackberry"],
     "preparation": "Shake the ingredients and pour into highball glass. Top with Sparkling wine." },
   { "name": "God Father",
     "glass": "old-fashioned",
@@ -1127,7 +1166,7 @@ cocktail_id
         "amount": 3,
         "ingredient": "Cranberry juice" }
     ],
-    "garnish": "Lime slice",
+    "garnish": ["Lime slice"],
     "preparation": "Shake with ice cubes. Strain into a large cocktail glass." },
   { "name": "Dry Martini",
     "glass": "martini",
@@ -1176,7 +1215,7 @@ cocktail_id
         "amount": 1,
         "ingredient": "Lemon juice" }
     ],
-    "garnish": "Lemon twist and a cherry",
+    "garnish": ["Lemon twist", "Cherry"],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass." },
   { "name": "Caipirinha",
     "glass": "old-fashioned",
@@ -1185,10 +1224,13 @@ cocktail_id
       { "unit": "cl",
         "amount": 5,
         "ingredient": "Cachaca" },
-      { "special": "half fresh lime cut into 4 wedges" },
-      { "special": "2 teaspoon sugar" }
+      { "amount": 1,
+        "ingredient": "Fresh lime" },
+      { "unit": "teaspoons",
+        "amount": 2,
+        "ingredient": "Sugar" }
     ],
-    "preparation": "Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca)." },
+    "preparation": "Cut lime into 4 wedges. Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca)." },
   { "name": "Vampiro",
     "glass": "highball",
     "ingredients": [
@@ -1204,13 +1246,19 @@ cocktail_id
       { "unit": "cl",
         "amount": 1,
         "ingredient": "Lime juice" },
-      { "special": "1 teaspoon clear honey" },
-      { "special": "Half slice onion finely chopped" },
-      { "special": "Few slices fresh red hot chili peppers" },
-      { "special": "Few drops Worcestershire sauce" },
-      { "special": "Salt" }
+      { "unit": "teaspoon",
+        "amount": 1,
+        "ingredient": "Clear honey" },
+      { "unit": "slice",
+        "amount": 1/2,
+        "ingredient": "nion finely chopped" },
+      { "unit": "slices",
+        "ingredient": "Fresh red hot chili peppers" },
+        { "unit": "drops",
+          "ingredient": "Worcestershire sauce" },
+      { "ingredient": "Salt" }
     ],
-    "garnish": "Lime wedge and a green or red chili",
+    "garnish": ["Lime wedge", "Fresh chili"],
     "preparation": "Shake with ice cubes. Strain into a highball glass, filled with ice." },
   { "name": "Kamikaze",
     "glass": "martini",
@@ -1256,6 +1304,6 @@ cocktail_id
         "amount": 9,
         "ingredient": "Orange juice" }
     ],
-    "garnish": "Orance slice and a cherry",
+    "garnish": ["Orance slice", "Cherry"],
     "preparation": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top." }
 ]
