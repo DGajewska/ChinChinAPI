@@ -104,10 +104,27 @@ router.get('/cocktails/id/:cocktailId', (req, res) => {
   })
 })
 
+router.get('/cocktails/all', (req, res) => {
+  Cocktail.
+    aggregate([
+      {
+        $project: {
+          name: true,
+          pictureUrl: true,
+          _id: false
+        }
+      }
+    ])
+    .exec((err, cocktail) => {
+    if (err) {
+      res.send(err);
+    }
+    res.json(cocktail);
+  })
+})
 
 router.get('/cocktails/name/:cocktailName', (req, res) => {
   Cocktail.
-    // find({name: req.params.cocktailName}).
     aggregate([
         {
           $match: { name: req.params.cocktailName }
@@ -115,24 +132,15 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
         {
           $project: {
             name: true,
-            'ingredients.ingredient': true
+            pictureUrl: true,
+            _id: false
           }
         },
-        {
-          $lookup: {
-            from: 'ingredients',
-            localField: 'ingredients.ingredient',
-            foreignField: '_id',
-            as: 'ingredients.ingredient'
-          }
-        }
       ]).
-    // populate({ path: 'ingredients.ingredient', select: 'name -_id'}).
     exec((err, cocktail) => {
     if (err) {
       res.send(err);
     }
-    console.log(cocktail);
     res.json(cocktail);
   })
 })
