@@ -124,25 +124,14 @@ router.get('/cocktails/all', (req, res) => {
 })
 
 router.get('/cocktails/name/:cocktailName', (req, res) => {
-  Cocktail.
-    aggregate([
-        {
-          $match: { name: req.params.cocktailName }
-        },
-        {
-          $project: {
-            name: true,
-            pictureUrl: true,
-            _id: false
-          }
-        },
-      ]).
+  Cocktail.find({ name: req.params.cocktailName }).
+    populate({ path: 'ingredients.ingredient', select: 'name abv taste -_id' }).
     exec((err, cocktail) => {
-    if (err) {
+      if (err) {
       res.send(err);
-    }
-    res.json(cocktail);
-  })
+      }
+      res.json(cocktail);
+    })
 })
 
 router.get('/ingredients/:ingredientName', (req, res) => {
