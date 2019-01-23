@@ -1,17 +1,19 @@
-[
+{
+"cocktailsList":
+  [
   { "name": "Vesper",
     "glass": "martini",
     "category": "Before Dinner Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 0.75,
-        "ingredient": "Lillet Blonde" }
+        "ingredient": "5c4738961a99d816e9344460"}
     ],
     "garnish": ["Lemon twist"],
     "preparation": "Shake and strain into a chilled cocktail glass.",
@@ -22,13 +24,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Grenadine syrup" }
+        "ingredient": "5c474c569d69251be2d9ef4a"}
     ],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/bacardi.jpg" },
@@ -38,29 +40,30 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Campari" },
+        "ingredient": "5c4738961a99d816e9344447" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Sweet red vermouth" }
+        "ingredient": "5c474c569d69251be2d9ef64" }
     ],
     "garnish": ["Half an orange slice"],
     "preparation": "Build into old-fashioned glass filled with ice. Stir gently.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/negroni.jpg" },
   { "name": "Rose",
     "glass": "martini",
+    "category": "All Day Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Kirsch" },
+        "ingredient": "5c4738961a99d816e934445e"},
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Dry vermouth"},
+        "ingredient": "5c474c569d69251be2d9ef43"},
       { "unit": "dashes",
         "amount": 3,
-        "ingredient": "Strawberry syrup"}
+        "ingredient": "5c474c569d69251be2d9ef61"}
     ],
     "preparation": "Stir all ingredients with ice and strain into a cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/rose.jpg" },
@@ -70,15 +73,15 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Bourbon whiskey" },
+        "ingredient": "5c474c569d69251be2d9ef3c"},
       { "unit": "dashes",
         "amount": 2,
-        "ingredient": "Angostura Bitters"},
+        "ingredient": "5c474c569d69251be2d9ef3b"},
       { "unit": "cube",
         "amount": 1,
-        "ingredient": "Sugar"},
+        "ingredient": "5c474c569d69251be2d9ef62"},
       { "unit": "dashes",
-        "ingredient": "Water" }
+        "ingredient": "5c474c569d69251be2d9ef67" }
     ],
     "garnish": ["Orange slice", "Cherry"],
     "preparation": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky.",
@@ -89,19 +92,19 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Dry vermouth" },
+        "ingredient": "5c474c569d69251be2d9ef43"},
       { "unit": "bar spoon",
         "amount": 0.5,
-        "ingredient": "Maraschino cherry liqueur"},
+        "ingredient": "5c474c569d69251be2d9ef4e"},
       { "unit": "bar spoon",
         "amount": 0.25,
-        "ingredient": "Absinthe"},
+        "ingredient": "5c4738961a99d816e9344441"},
       { "unit": "dashes",
         "amount": 3,
-        "ingredient": "Orange Bitters" }
+        "ingredient": "5c4738961a99d816e9344463"}
     ],
     "garnish": ["Cherry", "Lemon twist"],
     "preparation": "Stir all ingredients with ice and strain into cocktail glass.",
@@ -112,17 +115,17 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "sprigs",
         "amount": 6,
-        "ingredient": "Mint" },
+        "ingredient": "5c474c569d69251be2d9ef4f"},
       { "unit": "teaspoons",
         "amount": 1,
-        "ingredient": "White sugar" },
-      { "ingredient": "Soda water" }
+        "ingredient": "5c474c569d69251be2d9ef62" },
+      { "ingredient": "5c4738961a99d816e934446c"}
     ],
     "garnish": ["Mint leaves", "Lemon slice"],
     "preparation": "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw.",
@@ -133,13 +136,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 12,
-        "ingredient": "Ginger Ale" },
+        "ingredient": "5c4738961a99d816e934445a"},
       { "unit": "dash",
         "amount": 1,
-        "ingredient": "Angostura bitters" }
+        "ingredient": "5c474c569d69251be2d9ef3b"}
     ],
     "garnish": "Lemon twist",
     "preparation": "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters.",
@@ -150,25 +153,25 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Dark rum" },
+        "ingredient": "5c4738961a99d816e9344452"},
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Orange juice" },
+        "ingredient": "5c4738961a99d816e9344464"},
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Pineapple juice" },
+        "ingredient": "5c4738961a99d816e9344467"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Grenadine syrup" },
+        "ingredient": "5c474c569d69251be2d9ef4a"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "dash",
         "amount": 3,
-        "ingredient": "Angostura bitters" }
+        "ingredient": "5c474c569d69251be2d9ef3b"}
     ],
     "garnish": ["Pineapple slice", "Cherry"],
     "preparation": "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”.",
@@ -179,13 +182,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 12,
-        "ingredient": "Cranberry juice" },
+        "ingredient": "5c4738961a99d816e934444e"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Grapefruit juice" }
+        "ingredient": "5c4738961a99d816e934445c"}
     ],
     "garnish": "Lime wedge",
     "preparation": "Build all ingredients in a rock glass filled with ice.",
@@ -196,16 +199,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Pisco" },
+        "ingredient": "5c4738961a99d816e9344468"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "small egg",
         "amount": 1,
-        "ingredient": "Egg white" }
+        "ingredient": "5c474c569d69251be2d9ef44"}
     ],
     "preparation": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/pisco_sour.jpg" },
@@ -215,28 +218,28 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Tequila" },
+        "ingredient": "5c4738961a99d816e934446e"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 3.0,
-        "ingredient": "Gomme syrup" },
+        "ingredient": "5c474c569d69251be2d9ef48"},
       { "unit": "dash",
         "amount": 1,
-        "ingredient": "Cola" }
+        "ingredient": "5c4738961a99d816e934444d"}
     ],
     "garnish": ["Lemon twist"],
     "preparation": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw.",
@@ -247,15 +250,15 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Raspberry syrup" },
+        "ingredient": "5c474c569d69251be2d9ef5a" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "drops",
-        "ingredient": "Egg White" }
+        "ingredient": "5c474c569d69251be2d9ef44"}
     ],
     "preparation": "Shake with ice cubes. Strain into cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/clover_club.jpg" },
@@ -265,13 +268,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Apricot brandy" },
+        "ingredient": "5c4738961a99d816e9344443" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Calvados" }
+        "ingredient": "5c4738961a99d816e9344446" }
     ],
     "preparation": "Shake with ice cubes. Strain into a cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/angel_face.jpg" },
@@ -281,10 +284,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 7.5,
-        "ingredient": "Champagne" },
+        "ingredient": "5c4738961a99d816e9344448" },
       { "unit": "cl",
         "amount": 7.5,
-        "ingredient": "Orange juice" }
+        "ingredient": "5c4738961a99d816e9344464"}
     ],
     "garnish": ["Orange twist"],
     "preparation": "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink.",
@@ -295,15 +298,15 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Bourbon whiskey" },
+        "ingredient": "5c474c569d69251be2d9ef3c"},
       { "unit": "cl",
         "amount": 3.0,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Sugar syrup" }
+        "ingredient": "5c474c569d69251be2d9ef63" }
     ],
-    "garnish": ["Half an orange slice", "Cherry"],
+    "garnish": "Half an orange slice and cherry",
     "preparation": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/whiskey_sour.jpg" },
   { "name": "Screwdriver",
@@ -312,10 +315,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 10,
-        "ingredient": "Orange juice" }
+        "ingredient": "5c4738961a99d816e9344464"}
     ],
     "garnish": ["Orange slice"],
     "preparation": "Build into a highball glass filled with ice. Stir gently.",
@@ -326,13 +329,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 12,
-        "ingredient": "Cola" },
+        "ingredient": "5c4738961a99d816e934444d"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "garnish": ["Lime wedge"],
     "preparation": "Build all ingredients in a highball glass filled with ice.",
@@ -343,13 +346,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Rye whiskey"},
+        "ingredient": "5c474c569d69251be2d9ef5c"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Red vermouth"},
+        "ingredient": "5c474c569d69251be2d9ef5b"},
       { "unit": "dash",
         "amount": 1,
-        "ingredient": "Angostura Bitters"}
+        "ingredient": "5c474c569d69251be2d9ef3b"}
     ],
     "garnish": ["Cherry"],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.",
@@ -360,13 +363,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Red Port" },
+        "ingredient": "5c4738961a99d816e934446b"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Egg yolk" }
+        "ingredient": "5c4738961a99d816e9344457"}
     ],
     "preparation": "Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/porto_flip.jpg" },
@@ -376,16 +379,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "cl",
         "amount": 8,
-        "ingredient": "Soda water" }
+        "ingredient": "5c4738961a99d816e934446c"}
     ],
     "garnish": ["Lemon slice"],
     "preparation": "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.",
@@ -396,13 +399,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Coffee liqueur" },
-      { "ingredient": "Sugar syrup" },
+        "ingredient": "5c4738961a99d816e934444b"},
+      { "ingredient": "5c474c569d69251be2d9ef63" },
       { "amount": 1,
-        "ingredient": "short strong Espresso" }
+        "ingredient": "5c474c569d69251be2d9ef5f" }
     ],
     "preparation": "Shake and strain into a chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/espresso_martini.jpg" },
@@ -412,13 +415,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Tequila" },
+        "ingredient": "5c4738961a99d816e934446e"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "preparation": "Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/margarita.jpg" },
@@ -428,16 +431,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "dashes",
         "amount": 2,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Champagne" }
+        "ingredient": "5c4738961a99d816e9344448" }
     ],
     "preparation": "Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/french75.jpg" },
@@ -447,16 +450,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Galliano" },
+        "ingredient": "5c4738961a99d816e9344458"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "preparation": "Shake and strain into a chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/yellow_bird.jpg" },
@@ -466,13 +469,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Pineapple juice" },
+        "ingredient": "5c4738961a99d816e9344467"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Coconut milk" }
+        "ingredient": "5c4738961a99d816e934444a"}
     ],
     "garnish": ["Pineapple slice", "Cherry"],
     "preparation": "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws.",
@@ -483,13 +486,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Maraschino cherry liqueur" },
+        "ingredient": "5c474c569d69251be2d9ef4e"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" }
+        "ingredient": "5c4738961a99d816e934445f"}
     ],
     "preparation": "Shake and strain into a chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/aviation.jpg" },
@@ -499,10 +502,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 10,
-        "ingredient": "Prosecco" },
+        "ingredient": "5c4738961a99d816e9344469"},
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Peach puree" }
+        "ingredient": "5c4738961a99d816e9344465"}
     ],
     "preparation": "Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/bellini.jpg" },
@@ -512,13 +515,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "White Créme de Cacao" },
+        "ingredient": "5c474c569d69251be2d9ef68" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Green Créme de Menthe" },
+        "ingredient": "5c474c569d69251be2d9ef49"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Cream" }
+        "ingredient": "5c4738961a99d816e934444f"}
     ],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/grasshopper.jpg" },
@@ -528,13 +531,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Tequila" },
+        "ingredient": "5c4738961a99d816e934446e"},
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Orange juice" },
+        "ingredient": "5c4738961a99d816e9344464"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Grenadine syrup" }
+        "ingredient": "5c474c569d69251be2d9ef4a"}
     ],
     "garnish": ["Orange slice", "Cherry"],
     "preparation": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.",
@@ -545,13 +548,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Sugar syrup" }
+        "ingredient": "5c474c569d69251be2d9ef63" }
     ],
     "preparation": "Shake and strain into a cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/daquiri.jpg" },
@@ -561,10 +564,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Scotch whisky" },
+        "ingredient": "5c474c569d69251be2d9ef5e" },
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Drambuie" }
+        "ingredient": "5c4738961a99d816e9344455"}
     ],
     "garnish": ["Lemon twist"],
     "preparation": "Build into old-fashioned glass filled with ice. Stir gently.",
@@ -575,13 +578,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Coffee liqueur" },
+        "ingredient": "5c4738961a99d816e934444b"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Irish Cream liqueur" },
+        "ingredient": "5c474c569d69251be2d9ef4c"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec" }
+        "ingredient": "5c4738961a99d816e9344470"}
     ],
     "preparation": "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/b52.jpg" },
@@ -591,10 +594,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "White Créme de Menthe" }
+        "ingredient": "5c4839d6b289ec26b53edbb5" }
     ],
     "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/stinger.jpg" },
@@ -604,28 +607,29 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Galliano" },
+        "ingredient": "5c4738961a99d816e9344458"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Orange juice" },
+        "ingredient": "5c4738961a99d816e9344464"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Cream" }
+        "ingredient": "5c4738961a99d816e934444f"}
     ],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/golden_dream.jpg" },
   { "name": "God Mother",
     "glass": "old-fashioned",
+    "category": "Before Dinner Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "DiSaronno" }
+        "ingredient": "5c4738961a99d816e9344453"}
     ],
     "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/godfather.jpg" },
@@ -635,12 +639,12 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Prosecco" },
+        "ingredient": "5c4738961a99d816e9344469"},
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Aperol" },
+        "ingredient": "5c4738961a99d816e9344442" },
       { "unit": "splash",
-        "ingredient": "Soda water" }
+        "ingredient": "5c4738961a99d816e934446c"}
     ],
     "garnish": ["Half an orange slice"],
     "preparation": "Build into an old-fashioned glass filled with ice. Top with a splash of soda water.",
@@ -651,32 +655,33 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Blackberry liqueur" }
+        "ingredient": "5c4738961a99d816e9344444" }
     ],
     "garnish": ["Lemon slice", "Blackberries"],
     "preparation": "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/bramble.jpg" },
   { "name": "Alexander",
     "glass": "martini",
+    "category": "After Dinner Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Brown Créme de Cacao" },
+        "ingredient": "5c474c569d69251be2d9ef3d"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Cream" }
+        "ingredient": "5c4738961a99d816e934444f"}
     ],
     "preparation": "Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/alexander.jpg" },
@@ -686,13 +691,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Citron vodka" },
+        "ingredient": "5c474c569d69251be2d9ef40"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" }
+        "ingredient": "5c4738961a99d816e934445f"}
     ],
     "garnish": ["Lemon slice"],
     "preparation": "Shake and strain into a chilled cocktail glass rimmed with sugar.",
@@ -703,13 +708,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Raspberry liqueur" },
+        "ingredient": "5c4738961a99d816e934446a"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Pineapple juice" }
+        "ingredient": "5c4738961a99d816e9344467"}
     ],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/french_martini.jpg" },
@@ -719,10 +724,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Coffee liqueur" }
+        "ingredient": "5c4738961a99d816e934444b"}
     ],
     "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/black_russian.jpg" },
@@ -732,19 +737,19 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Tomato juice" },
+        "ingredient": "5c4738961a99d816e934446f"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "dashes",
         "amount": 2,
-        "ingredient": "Worcestershire Sauce" },
-      { "ingredient": "Tabasco" },
-      { "ingredient": "Celery salt" },
-      { "ingredient": "Pepper" }
+        "ingredient": "5c474c569d69251be2d9ef69" },
+      { "ingredient": "5c474c569d69251be2d9ef65" },
+      { "ingredient": "5c474c569d69251be2d9ef3f"},
+      { "ingredient": "5c474c569d69251be2d9ef57" }
     ],
     "garnish": ["Celery", "Lemon wedge"],
     "preparation": "Stir gently, pour all ingredients into highball glass.",
@@ -755,19 +760,19 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Dark rum" },
+        "ingredient": "5c4738961a99d816e9344452"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Orange Curaçao" },
+        "ingredient": "5c474c569d69251be2d9ef53" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Orgeat syrup" },
+        "ingredient": "5c474c569d69251be2d9ef55" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "garnish": ["Pineapple spear", "Mint leaves", "Lime wedge"],
     "preparation": "Shake and strain into highball glass. Serve with straw.",
@@ -778,17 +783,17 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Gold rum" },
+        "ingredient": "5c474c569d69251be2d9ef47"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Galliano" },
+        "ingredient": "5c4738961a99d816e9344458"},
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Pineapple juice" },
+        "ingredient": "5c4738961a99d816e9344467"},
       { "unit": "dash",
         "amount": 1,
-        "ingredient": "Lime juice" },
-      { "ingredient": "Prosecco" }
+        "ingredient": "5c4738961a99d816e9344461"},
+      { "ingredient": "5c4738961a99d816e9344469"}
     ],
     "preparation": "Shake all ingredients aside from Prosecco. Pour into glass and top with Prosecco.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/baracuda.jpg"
@@ -799,16 +804,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Peach schnapps" },
+        "ingredient": "5c4738961a99d816e9344466"},
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Cranberry juice" },
+        "ingredient": "5c4738961a99d816e934444e"},
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Orange juice" }
+        "ingredient": "5c4738961a99d816e9344464"}
     ],
     "garnish": ["Orange slice"],
     "preparation": "Build all ingredients in a highball glass filled with ice.",
@@ -819,16 +824,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Orange juice" },
+        "ingredient": "5c4738961a99d816e9344464"},
       { "unit": "drops",
         "amount": 2,
-        "ingredient": "Absinthe" },
+        "ingredient": "5c4738961a99d816e9344441" },
       { "unit": "drops",
         "amount": 2,
-        "ingredient": "Grenadine" }
+        "ingredient": "5c474c569d69251be2d9ef4a" }
     ],
     "preparation": "Shake and strain into a chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/monkey_gland.jpg" },
@@ -838,13 +843,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "drops",
         "amount": 2,
-        "ingredient": "Peach Bitters" },
+        "ingredient": "5c474c569d69251be2d9ef56" },
       { "unit": "leaves",
         "amount": 2,
-        "ingredient": "Mint leaves" }
+        "ingredient": "5c474c569d69251be2d9ef50"}
     ],
     "garnish": ["Mint leaves"],
     "preparation": "Stir in mixing glass with ice cubes. Strain into a cocktail glass.",
@@ -855,13 +860,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Lemon juice" }
+        "ingredient": "5c4738961a99d816e934445f"}
     ],
     "preparation": "Shake with ice cubes. Strain into cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/sidecar.jpg" },
@@ -871,16 +876,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Irish Whiskey" },
+        "ingredient": "5c474c569d69251be2d9ef4d"},
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Hot coffee" },
+        "ingredient": "5c4738961a99d816e934445d"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Cream" },
+        "ingredient": "5c4738961a99d816e934444f"},
       { "unit": "teaspoon",
         "amount": 1,
-        "ingredient": "Brown sugar" }
+        "ingredient": "5c474c569d69251be2d9ef3e"}
     ],
     "preparation": "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2016/02/irish_coffee.jpg" },
@@ -890,19 +895,19 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Absinthe" },
+        "ingredient": "5c4738961a99d816e9344441" },
       { "unit": "cube",
         "amount": 1,
-        "ingredient": "Sugar" },
+        "ingredient": "5c474c569d69251be2d9ef62" },
       { "unit": "dashes",
         "amount": 2,
-        "ingredient": "Peychaud’s bitters" }
+        "ingredient": "5c474c569d69251be2d9ef58" }
     ],
     "garnish": ["Lemon twist"],
-    "preparation": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.",
+    "preparation": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess 5c4738961a99d816e9344441 from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/sazerac.jpg" },
   { "name": "Americano",
     "glass": "old-fashioned",
@@ -910,12 +915,12 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Campari" },
+        "ingredient": "5c4738961a99d816e9344447" },
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Red vermouth" },
+        "ingredient": "5c474c569d69251be2d9ef5b" },
       { "unit": "splash",
-        "ingredient": "Soda water" }
+        "ingredient": "5c4738961a99d816e934446c"}
     ],
     "garnish": ["Half an orange slice"],
     "preparation": "Build into old fashioned glass filled with ice cubes. Add a splash of soda water.",
@@ -926,41 +931,42 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Cherry liqueur" },
+        "ingredient": "5c4738961a99d816e9344449"},
       { "unit": "cl",
         "amount": 0.75,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 0.75,
-        "ingredient": "DOM Bénédictine" },
+        "ingredient": "5c4738961a99d816e9344454"},
       { "unit": "cl",
         "amount": 12.0,
-        "ingredient": "Pineapple juice" },
+        "ingredient": "5c4738961a99d816e9344467"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Grenadine syrup" },
+        "ingredient": "5c474c569d69251be2d9ef4a"},
       { "unit": "dash",
         "amount": 1,
-        "ingredient": "Angostura Bitters"}
+        "ingredient": "5c474c569d69251be2d9ef3b"}
     ],
     "garnish": ["Pineapple slice", "Cherry"],
     "preparation": "Shake with ice cubes. Strain into highball glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/singapore_sling.jpg" },
   { "name": "French Connection",
     "glass": "old-fashioned",
+    "category": "All Day Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "DiSaronno" }
+        "ingredient": "5c4738961a99d816e9344453"}
     ],
     "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/french_connection.jpg" },
@@ -970,13 +976,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 12,
-        "ingredient": "Ginger beer" },
+        "ingredient": "5c4738961a99d816e934445b"},
       { "unit": "cl",
         "amount": 0.5,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "garnish": ["Lime slice"],
     "preparation": "Combine the vodka and ginger beer. Add lime juice.",
@@ -987,16 +993,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Soda water" }
+        "ingredient": "5c4738961a99d816e934446c"}
     ],
     "garnish": ["Lemon slice", "Cherry"],
     "preparation": "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)",
@@ -1007,10 +1013,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Dry White Wine" },
+        "ingredient": "5c4738961a99d816e9344456"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Créme de Cassis" }
+        "ingredient": "5c474c569d69251be2d9ef42"}
     ],
     "preparation": "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/kir.jpg" },
@@ -1020,18 +1026,18 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Bourbon whiskey" },
+        "ingredient": "5c474c569d69251be2d9ef3c"},
       { "unit": "sprigs",
         "amount": 4,
-        "ingredient": "Mint" },
+        "ingredient": "5c474c569d69251be2d9ef4f"},
       { "unit": "teaspoon",
         "amount": 1,
-        "ingredient": "Powdered sugar" },
+        "ingredient": "5c474c569d69251be2d9ef59" },
       { "unit": "teaspoons",
         "amount": 2,
-        "ingredient": "Water" }
+        "ingredient": "5c474c569d69251be2d9ef67" }
     ],
-    "garnish": ["Mint sprig"],
+    "garnish": ["Mint spring"],
     "preparation": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/mint_julep.jpg" },
   { "name": "Tommy's Margarita",
@@ -1040,13 +1046,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Tequila" },
+        "ingredient": "5c4738961a99d816e934446e"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "bar spoons",
         "amount": 2,
-        "ingredient": "Agave nectar" }
+        "ingredient": "5c474c569d69251be2d9ef3a"}
     ],
     "preparation": "Shake and strain into a chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/tommy_margarita.jpg" },
@@ -1056,13 +1062,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Apricot brandy" },
+        "ingredient": "5c4738961a99d816e9344443" },
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Orange juice" }
+        "ingredient": "5c4738961a99d816e9344464"}
     ],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/paradise.jpg" },
@@ -1072,13 +1078,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Dry vermouth" },
+        "ingredient": "5c474c569d69251be2d9ef43"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Olive juice" }
+        "ingredient": "5c4738961a99d816e9344462"}
     ],
     "garnish": ["Green olive"],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass.",
@@ -1089,16 +1095,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Champagne" },
+        "ingredient": "5c4738961a99d816e9344448" },
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "dashes",
         "amount": 2,
-        "ingredient": "Angostura Bitters"},
+        "ingredient": "5c474c569d69251be2d9ef3b"},
       { "unit": "cube",
         "amount": 1,
-        "ingredient": "Sugar"}
+        "ingredient": "5c474c569d69251be2d9ef62"}
     ],
     "garnish": ["Orange slice", "Cherry"],
     "preparation": "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.",
@@ -1109,16 +1115,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Maraschino cherry liqueur" },
+        "ingredient": "5c474c569d69251be2d9ef4e"},
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Pineapple juice" },
+        "ingredient": "5c4738961a99d816e9344467"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Grenadine syrup" }
+        "ingredient": "5c474c569d69251be2d9ef4a"}
     ],
     "preparation": "Shake and strain into a chilled large cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/mary_pickford.jpg" },
@@ -1128,16 +1134,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Grapefruit juice" },
+        "ingredient": "5c4738961a99d816e934445c"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Maraschino cherry liqueur" },
+        "ingredient": "5c474c569d69251be2d9ef4e"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "preparation": "Shake with ice cubes. Strain into a double cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2016/02/hemingway_special.jpg" },
@@ -1147,10 +1153,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Dark rum" },
+        "ingredient": "5c4738961a99d816e9344452"},
       { "unit": "cl",
         "amount": 10,
-        "ingredient": "Ginger beer" }
+        "ingredient": "5c4738961a99d816e934445b"}
     ],
     "garnish": ["Lime wedge"],
     "preparation": "Build into highball glass filled with ice. Add rum first and top it with ginger beer.",
@@ -1161,28 +1167,28 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Sugar syrup" },
+        "ingredient": "5c474c569d69251be2d9ef63" },
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Cream" },
+        "ingredient": "5c4738961a99d816e934444f"},
       { "amount": 1,
-        "ingredient": "Egg white" },
+        "ingredient": "5c474c569d69251be2d9ef44"},
       { "unit": "dashes",
         "amount": 3,
-        "ingredient": "Orange flower water" },
+        "ingredient": "5c474c569d69251be2d9ef54" },
       { "unit": "drops",
         "amount": 2,
-        "ingredient": "Vanilla extract" },
-      { "ingredient": "Soda water" }
+        "ingredient": "5c474c569d69251be2d9ef66" },
+      { "ingredient": "5c4738961a99d816e934446c"}
     ],
     "preparation": "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/ramos_fizz.jpg" },
@@ -1192,29 +1198,30 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 2.5,
-        "ingredient": "Lemon juice" },
+        "ingredient": "5c4738961a99d816e934445f"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Créme de Cassis" },
+        "ingredient": "5c474c569d69251be2d9ef42"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Sugar syrup" }
+        "ingredient": "5c474c569d69251be2d9ef63" }
     ],
     "garnish": ["Lemon slice", "Blackberry"],
     "preparation": "Shake the ingredients and pour into highball glass. Top with Sparkling wine.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/russian_spring.jpg" },
   { "name": "God Father",
     "glass": "old-fashioned",
+    "category": "Before Dinner Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "Scotch whisky" },
+        "ingredient": "5c474c569d69251be2d9ef5e" },
       { "unit": "cl",
         "amount": 3.5,
-        "ingredient": "DiSaronno" }
+        "ingredient": "5c4738961a99d816e9344453"}
     ],
     "preparation": "Build into old fashioned glass filled with ice cubes. Stir gently.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/godfather.jpg" },
@@ -1224,16 +1231,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Citron vodka" },
+        "ingredient": "5c474c569d69251be2d9ef40"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Cranberry juice" }
+        "ingredient": "5c4738961a99d816e934444e"}
     ],
     "garnish": ["Lime slice"],
     "preparation": "Shake with ice cubes. Strain into a large cocktail glass.",
@@ -1244,10 +1251,10 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 6,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Dry vermouth" }
+        "ingredient": "5c474c569d69251be2d9ef43"}
     ],
     "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/dry_martini.jpg" },
@@ -1257,16 +1264,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "White rum" },
+        "ingredient": "5c4738961a99d816e9344474"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Cognac" },
+        "ingredient": "5c4738961a99d816e934444c"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Lemon juice" }
+        "ingredient": "5c4738961a99d816e934445f"}
     ],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/between_sheets.jpg" },
@@ -1276,16 +1283,16 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Maraschino cherry liqueur" },
+        "ingredient": "5c474c569d69251be2d9ef4e"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Orange Bitters" },
+        "ingredient": "5c4738961a99d816e9344463"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Lemon juice" }
+        "ingredient": "5c4738961a99d816e934445f"}
     ],
     "garnish": ["Lemon twist", "Cherry"],
     "preparation": "Shake with ice cubes. Strain into chilled cocktail glass.",
@@ -1296,41 +1303,42 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Cachaca" },
+        "ingredient": "5c4738961a99d816e9344445" },
       { "amount": 1,
-        "ingredient": "Fresh lime" },
+        "ingredient": "5c474c569d69251be2d9ef45"},
       { "unit": "teaspoons",
         "amount": 2,
-        "ingredient": "Sugar" }
+        "ingredient": "5c474c569d69251be2d9ef62" }
     ],
     "preparation": "Cut lime into 4 wedges. Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca).",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/caipirinha.jpg" },
   { "name": "Vampiro",
     "glass": "highball",
+    "category": "All Day Cocktail",
     "ingredients": [
       { "unit": "cl",
         "amount": 5,
-        "ingredient": "Silver Tequila" },
+        "ingredient": "5c474c569d69251be2d9ef60" },
       { "unit": "cl",
         "amount": 7,
-        "ingredient": "Tomato juice" },
+        "ingredient": "5c4738961a99d816e934446f"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Orange juice" },
+        "ingredient": "5c4738961a99d816e9344464"},
       { "unit": "cl",
         "amount": 1,
-        "ingredient": "Lime juice" },
+        "ingredient": "5c4738961a99d816e9344461"},
       { "unit": "teaspoon",
         "amount": 1,
-        "ingredient": "Clear honey" },
+        "ingredient": "5c474c569d69251be2d9ef41"},
       { "unit": "slice",
         "amount": 0.5,
-        "ingredient": "Onion finely chopped" },
+        "ingredient": "5c474c569d69251be2d9ef52" },
       { "unit": "slices",
-        "ingredient": "Fresh red hot chili peppers" },
+        "ingredient": "5c474c569d69251be2d9ef46"},
         { "unit": "drops",
-          "ingredient": "Worcestershire sauce" },
-      { "ingredient": "Salt" }
+          "ingredient": "5c474c569d69251be2d9ef69" },
+      { "ingredient": "5c474c569d69251be2d9ef5d" }
     ],
     "garnish": ["Lime wedge", "Fresh chili"],
     "preparation": "Shake with ice cubes. Strain into a highball glass, filled with ice.",
@@ -1341,13 +1349,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Lime juice" }
+        "ingredient": "5c4738961a99d816e9344461"}
     ],
     "preparation": "Shake and strain into a chilled cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/kamikaze.jpg" },
@@ -1357,13 +1365,13 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4,
-        "ingredient": "Gin" },
+        "ingredient": "5c4738961a99d816e9344459"},
       { "unit": "cl",
         "amount": 3,
-        "ingredient": "Triple Sec" },
+        "ingredient": "5c4738961a99d816e9344470"},
       { "unit": "cl",
         "amount": 2,
-        "ingredient": "Lemon juice" }
+        "ingredient": "5c4738961a99d816e934445f"}
     ],
     "preparation": "Shake with ice cubes. Strain into large cocktail glass.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/08/white_lady.jpg" },
@@ -1373,15 +1381,17 @@
     "ingredients": [
       { "unit": "cl",
         "amount": 4.5,
-        "ingredient": "Vodka" },
+        "ingredient": "5c4738961a99d816e9344472"},
       { "unit": "cl",
         "amount": 1.5,
-        "ingredient": "Galliano" },
+        "ingredient": "5c4738961a99d816e9344458"},
       { "unit": "cl",
         "amount": 9,
-        "ingredient": "Orange juice" }
+        "ingredient": "5c4738961a99d816e9344464"}
     ],
-    "garnish": ["Orange slice", "Cherry"],
+    "garnish": ["Orance slice", "Cherry"],
     "preparation": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top.",
     "pictureUrl": "http://iba-world.com/wp-content/uploads/2015/09/harvey_wallbanger.jpg" }
 ]
+
+}
