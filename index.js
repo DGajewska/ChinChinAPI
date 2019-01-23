@@ -92,7 +92,7 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   })
 })
 
-router.get('/cocktails/:cocktailId', (req, res) => {
+router.get('/cocktails/id/:cocktailId', (req, res) => {
   Cocktail.
     findById(req.params.cocktailId).
       populate({ path: 'ingredients.ingredient', select: 'name -_id'}).
@@ -101,6 +101,39 @@ router.get('/cocktails/:cocktailId', (req, res) => {
           res.send(err);
         }
         res.json(cocktail);
+  })
+})
+
+
+router.get('/cocktails/name/:cocktailName', (req, res) => {
+  Cocktail.
+    // find({name: req.params.cocktailName}).
+    aggregate([
+        {
+          $match: { name: req.params.cocktailName }
+        },
+        {
+          $project: {
+            name: true,
+            'ingredients.ingredient': true
+          }
+        },
+        {
+          $lookup: {
+            from: 'ingredients',
+            localField: 'ingredients.ingredient',
+            foreignField: '_id',
+            as: 'ingredients.ingredient'
+          }
+        }
+      ]).
+    // populate({ path: 'ingredients.ingredient', select: 'name -_id'}).
+    exec((err, cocktail) => {
+    if (err) {
+      res.send(err);
+    }
+    console.log(cocktail);
+    res.json(cocktail);
   })
 })
 
