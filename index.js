@@ -92,6 +92,30 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   })
 })
 
+router.post('/cocktails/ingredients-many', (req, res) => {
+Ingredient.
+  find({name: { $in: req.body.ingredients }}).
+  select('_id').
+  exec((err, ingredients) => {
+    if (err){
+      res.send(err);
+    }
+    ingredientIds = []
+    for (var i=0;i<ingredients.length;i++){
+      ingredientIds.push(`${ingredients[i]._id}`)
+    }
+    Cocktail.
+      find({ ingredients: { $elemMatch: { ingredient: { $in: ingredientIds } }}}).
+      populate({ path: 'ingredients.ingredient', select: 'name -_id' }).
+      exec((err, cocktails) => {
+        if (err){
+          res.send(err);
+        }
+        res.json(cocktails);
+    })
+  })
+})
+
 router.get('/cocktails/id/:cocktailId', (req, res) => {
   Cocktail.
     findById(req.params.cocktailId).
