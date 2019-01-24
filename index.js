@@ -159,6 +159,24 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
     })
 })
 
+router.get('/cocktails/filter/:namesList', (req, res) => {
+  console.log(req.params);
+  let namesList = req.params.namesList.split(',');
+  console.log(namesList);
+  Cocktail.aggregate([
+      {
+        $match: { name: { '$in': namesList } }
+      }
+    ]).
+    exec((err, cocktails) => {
+      if(err) {
+        res.send(err);
+      }
+      console.log(cocktails);
+      res.json(cocktails);
+    })
+})
+
 router.get('/ingredients/:ingredientName', (req, res) => {
   Ingredient.find({name: req.params.ingredientName}, (err, ingredient) => {
     if (err){
