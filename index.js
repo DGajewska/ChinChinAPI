@@ -92,18 +92,19 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   })
 })
 
-router.post('/cocktails/ingredients-many', (req, res) => {
-Ingredient.
-  find({name: { $in: req.body.ingredients }}).
-  select('_id').
-  exec((err, ingredients) => {
-    if (err){
-      res.send(err);
-    }
-    ingredientIds = []
-    for (var i=0;i<ingredients.length;i++){
-      ingredientIds.push(`${ingredients[i]._id}`)
-    }
+router.get('/cocktails/ingredients-many/:ingredients', (req, res) => {
+  let ingredientsList = req.params.ingredients.split(',');
+  console.log(ingredientsList);
+  Ingredient.
+    find({name: { $in: ingredientsList }}, {_id: true}).
+    exec((err, ingredients) => {
+      if (err){
+        res.send(err);
+      }
+      let ingredientIds = ingredients.map(function(ingredient) {
+        return ingredient._id;
+      })
+      console.log(ingredientIds);
     Cocktail.
       find({ ingredients: { $elemMatch: { ingredient: { $in: ingredientIds } }}}).
       populate({ path: 'ingredients.ingredient', select: 'name -_id' }).
