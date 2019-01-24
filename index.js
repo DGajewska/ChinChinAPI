@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const Ingredient = require('./models/ingredient');
 const Cocktail = require('./models/cocktail');
 
@@ -11,7 +12,8 @@ const app = express();
 // Configure app for bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+// Allows connections from external sources
+app.use(cors());
 // Set up port for server to listen on
 const port = process.env.PORT || 3000;
 
