@@ -92,7 +92,7 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   })
 })
 
-router.get('/cocktails/ingredients-many/:ingredients', (req, res) => {
+router.get('/cocktails/filter/by-ingredient/:ingredients', (req, res) => {
   let ingredientsList = req.params.ingredients.split(',');
   Ingredient.
     find({name: { $in: ingredientsList }}, {_id: true}).
@@ -186,7 +186,7 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
     })
 })
 
-router.get('/cocktails/filter/:namesList', (req, res) => {
+router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   let namesList = req.params.namesList.split(',');
   Cocktail.aggregate([
       {
