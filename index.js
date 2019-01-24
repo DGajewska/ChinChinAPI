@@ -152,17 +152,6 @@ router.get('/cocktails/filter/:namesList', (req, res) => {
     })
 })
 
-// router.get('/cocktails/filter/:ingredientsList', (req, res) => {
-//   let matches = [];
-//   req.params.ingredientsList.forEach(function(ingredient) {
-//     Cocktail.aggregate([
-//       {
-//
-//       }
-//     ])
-//   })
-// })
-
 router.get('/ingredients/:ingredientName', (req, res) => {
   Ingredient.find({name: req.params.ingredientName}, (err, ingredient) => {
     if (err){
