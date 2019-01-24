@@ -92,8 +92,10 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   })
 })
 
-router.get('/cocktails/filter/by-ingredient/:ingredients', (req, res) => {
+router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, res) => {
   let ingredientsList = req.params.ingredients.split(',');
+  let maxMissing = req.params.maxMissing;
+
   Ingredient.
     find({name: { $in: ingredientsList }}, {_id: true}).
     exec((err, ingredients) => {
@@ -135,11 +137,17 @@ router.get('/cocktails/filter/by-ingredient/:ingredients', (req, res) => {
             return item.ingredient.name;
           });
 
-          return cocktail;
+          if (!maxMissing || cocktail.missingCount <= req.params.maxMissing) {
+            return cocktail;
+          }
 
         })
 
-        res.json(results);
+        let filteredResults = results.filter(function (element) {
+          return element != null;
+        });
+
+        res.json(filteredResults);
     })
   })
 })
