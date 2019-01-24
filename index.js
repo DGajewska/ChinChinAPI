@@ -94,7 +94,6 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
 
 router.get('/cocktails/ingredients-many/:ingredients', (req, res) => {
   let ingredientsList = req.params.ingredients.split(',');
-  console.log(ingredientsList);
   Ingredient.
     find({name: { $in: ingredientsList }}, {_id: true}).
     exec((err, ingredients) => {
@@ -104,15 +103,43 @@ router.get('/cocktails/ingredients-many/:ingredients', (req, res) => {
       let ingredientIds = ingredients.map(function(ingredient) {
         return ingredient._id;
       })
-      console.log(ingredientIds);
     Cocktail.
-      find({ ingredients: { $elemMatch: { ingredient: { $in: ingredientIds } }}}).
-      populate({ path: 'ingredients.ingredient', select: 'name -_id' }).
+      find({ ingredients:
+        { $elemMatch:
+          { ingredient:
+            { $in: ingredientIds }
+          }
+        }
+      },
+      {
+        name: true,
+        pictureUrl: true,
+        ingredients: true,
+        _id: false
+      }).
+      populate({ path: 'ingredients.ingredient', select: 'name -_id'}).
       exec((err, cocktails) => {
         if (err){
           res.send(err);
         }
-        res.json(cocktails);
+
+        let results = cocktails.map(function(cocktail) {
+
+          cocktail = cocktail.toObject();
+          cocktail.missingCount = 0;
+
+          cocktail.ingredients = cocktail.ingredients.map(function(item) {
+            if (!ingredientsList.includes(item.ingredient.name)) {
+              cocktail.missingCount += 1;
+            }
+            return item.ingredient.name;
+          });
+
+          return cocktail;
+
+        })
+
+        res.json(results);
     })
   })
 })
@@ -160,9 +187,7 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
 })
 
 router.get('/cocktails/filter/:namesList', (req, res) => {
-  console.log(req.params);
   let namesList = req.params.namesList.split(',');
-  console.log(namesList);
   Cocktail.aggregate([
       {
         $match: { name: { '$in': namesList } }
@@ -172,7 +197,6 @@ router.get('/cocktails/filter/:namesList', (req, res) => {
       if(err) {
         res.send(err);
       }
-      console.log(cocktails);
       res.json(cocktails);
     })
 })
