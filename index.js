@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Ingredient = require('./models/ingredient');
 const Cocktail = require('./models/cocktail');
+const ReadFromDatabase = require('./routes/ReadFromDatabase');
 
 require('dotenv').config();
 
@@ -212,12 +213,7 @@ router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
 })
 
 router.get('/ingredients/:ingredientName', (req, res) => {
-  Ingredient.find({name: req.params.ingredientName}, (err, ingredient) => {
-    if (err){
-      res.send(err);
-    }
-    res.json(ingredient);
-  })
+  ReadFromDatabase.ingredientByName(req, res)
 })
 
 app.get('/', (req, res) => {
