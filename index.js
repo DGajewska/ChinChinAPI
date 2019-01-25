@@ -2,9 +2,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+
 const Ingredient = require('./models/ingredient');
 const Cocktail = require('./models/cocktail');
 const ReadFromDatabase = require('./routes/ReadFromDatabase');
+
+const passport = require('passport');
+
+const LocalStrategy = require('passport-local').Strategy;
+
+const Router = require('express').Router;
+
+const authMiddleware = require('./middleware/authmiddleware');
+const generateAccessToken = authMiddleware.generateAccessToken;
+const respond = authMiddleware.respond;
+const authenticate = authMiddleware.authenticate;
 
 require('dotenv').config();
 
@@ -13,18 +25,33 @@ const app = express();
 // Configure app for bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 // Allows connections from external sources
 app.use(cors());
+
 // Set up port for server to listen on
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3005;
 
 // Connect to DB
 mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useCreateIndex: true })
 
+//passport config
+app.use(passport.initialize());
+
+let Account = require('./models/account');
+passport.use(new LocalStrategy({
+  usernameField: 'email',
+  passwordField: 'password'
+},
+  Account.authenticate()
+));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
 // API Routes
 const router = express.Router();
 
-app.use('', router);
+app.use('/', router);
 
 app.get('/', (req, res) => {
   res.json({message: 'Welcome to Chin Chin API'})
@@ -209,6 +236,38 @@ router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
+
+router.post('/register', (req,res) => {
+  Account.register(new Account({
+    username: req.body.email
+  }), req.body.password, (err,account) =>{
+    if (err){
+      res.send(err);
+    }
+    passport.authenticate(
+      'local', {
+        session: false
+      })(req, res, () => {
+        res.status(200).send('Successfully created new account');
+      });
+  });
+});
+
+router.post('/login', passport.authenticate(
+  'local', {
+    session: false,
+    scope: []
+  }), generateAccessToken, respond);
+
+router.get('/logout', authenticate, (req, res) => {
+    req.logout();
+    res.status(200).send('Successfully logged out');
+});
+
+router.get('/me', authenticate, (req, res) => {
+  console.log(req.user);
+  res.status(200).json(req.user);
+});
 
 app.listen(port);
 console.log(`Server is listening on port ${port}`);
