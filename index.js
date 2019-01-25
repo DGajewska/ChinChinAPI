@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Ingredient = require('./models/ingredient');
 const Cocktail = require('./models/cocktail');
+const ReadFromDatabase = require('./routes/ReadFromDatabase');
 
 require('dotenv').config();
 
@@ -23,9 +24,7 @@ mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useCreateIndex: 
 // API Routes
 const router = express.Router();
 
-// Prefix routes with /api/chinchin
 app.use('', router);
-
 
 app.get('/', (req, res) => {
   res.json({message: 'Welcome to Chin Chin API'})
@@ -153,6 +152,8 @@ router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, re
           return element != null;
         });
 
+        filteredResults.sort((a, b) => { return a.missingCount - b.missingCount });
+
         res.json(filteredResults);
     })
   })
@@ -202,26 +203,11 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
 
 router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   let namesList = req.params.namesList.split(',');
-  Cocktail.aggregate([
-      {
-        $match: { name: { '$in': namesList } }
-      }
-    ]).
-    exec((err, cocktails) => {
-      if(err) {
-        res.send(err);
-      }
-      res.json(cocktails);
-    })
+  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/ingredients/:ingredientName', (req, res) => {
-  Ingredient.find({name: req.params.ingredientName}, (err, ingredient) => {
-    if (err){
-      res.send(err);
-    }
-    res.json(ingredient);
-  })
+  ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
 
 app.listen(port);
