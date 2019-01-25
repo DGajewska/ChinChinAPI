@@ -199,21 +199,11 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
 
 router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   let namesList = req.params.namesList.split(',');
-  Cocktail.aggregate([
-      {
-        $match: { name: { '$in': namesList } }
-      }
-    ]).
-    exec((err, cocktails) => {
-      if(err) {
-        res.send(err);
-      }
-      res.json(cocktails);
-    })
+  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/ingredients/:ingredientName', (req, res) => {
-  ReadFromDatabase.ingredientByName(req, res)
+  ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
 
 app.get('/', (req, res) => {
