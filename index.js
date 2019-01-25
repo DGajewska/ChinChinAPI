@@ -26,6 +26,10 @@ const router = express.Router();
 
 app.use('', router);
 
+app.get('/', (req, res) => {
+  res.json({message: 'Welcome to Chin Chin API'})
+})
+
 router.post('/ingredients/add', (req, res) =>{
   var newIngredient = new Ingredient();
   newIngredient._id = req.body._id;
@@ -204,10 +208,6 @@ router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
 
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
-})
-
-app.get('/', (req, res) => {
-  res.render('index.ejs')
 })
 
 app.listen(port);
