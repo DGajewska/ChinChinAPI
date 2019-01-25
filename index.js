@@ -7,11 +7,8 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const LocalStrategy = require('passport-local').Strategy;
-// const Router = require('express').Router;
 
 const authMiddleware = require('./middleware/authmiddleware');
-// const Cocktail = require('./models/cocktail');
-// const Ingredient = require('./models/ingredient');
 const ReadFromDatabase = require('./routes/ReadFromDatabase');
 
 const authenticate = authMiddleware.authenticate;
