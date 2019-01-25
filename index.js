@@ -67,7 +67,7 @@ router.get('/cocktails/id/:cocktailId', (req, res) => {
 })
 
 router.get('/cocktails/all', (_, res) => {
-  ReadFromDatabase.allCocktails(_, res);
+  ReadFromDatabase.allCocktails(res);
 })
 
 router.get('/cocktails/name/:cocktailName', (req, res) => {

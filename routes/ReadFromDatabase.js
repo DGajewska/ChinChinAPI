@@ -3,7 +3,7 @@ const Ingredient = require('../models/ingredient');
 
 class ReadFromDatabase {
 
-  static allCocktails(_, res) {
+  static allCocktails(res) {
     Cocktail.aggregate([
       { $project: {
         name: true,
@@ -29,7 +29,7 @@ class ReadFromDatabase {
     Cocktail.findById(
       cocktailId
     ).populate(
-      { path: 'ingredients.ingredient', 
+      { path: 'ingredients.ingredient',
         select: 'name -_id'}
     ).exec(
       (err, cocktail) => { standardResponse(res, err, cocktail) }
