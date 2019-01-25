@@ -24,8 +24,12 @@ mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useCreateIndex: 
 const router = express.Router();
 
 // Prefix routes with /api/chinchin
-app.use('/api/chinchin', router);
+app.use('', router);
 
+
+app.get('/', (req, res) => {
+  res.json({message: 'Welcome to Chin Chin API'})
+})
 
 router.post('/ingredients/add', (req, res) =>{
   var newIngredient = new Ingredient();
@@ -218,10 +222,6 @@ router.get('/ingredients/:ingredientName', (req, res) => {
     }
     res.json(ingredient);
   })
-})
-
-app.get('/', (req, res) => {
-  res.render('index.ejs')
 })
 
 app.listen(port);
