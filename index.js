@@ -24,9 +24,7 @@ mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useCreateIndex: 
 // API Routes
 const router = express.Router();
 
-// Prefix routes with /api/chinchin
-app.use('/api/chinchin', router);
-
+app.use('', router);
 
 router.post('/ingredients/add', (req, res) =>{
   var newIngredient = new Ingredient();
@@ -149,6 +147,8 @@ router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, re
         let filteredResults = results.filter(function (element) {
           return element != null;
         });
+
+        filteredResults.sort((a, b) => { return a.missingCount - b.missingCount });
 
         res.json(filteredResults);
     })
