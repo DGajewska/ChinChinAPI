@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const Ingredient = require('./models/ingredient');
 const Cocktail = require('./models/cocktail');
+const ReadFromDatabase = require('./routes/ReadFromDatabase');
 
 const passport = require('passport');
 
@@ -50,8 +51,11 @@ passport.deserializeUser(Account.deserializeUser());
 // API Routes
 const router = express.Router();
 
-// Set root folder
 app.use('/', router);
+
+app.get('/', (req, res) => {
+  res.json({message: 'Welcome to Chin Chin API'})
+})
 
 router.post('/ingredients/add', (req, res) =>{
   var newIngredient = new Ingredient();
@@ -175,6 +179,8 @@ router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, re
           return element != null;
         });
 
+        filteredResults.sort((a, b) => { return a.missingCount - b.missingCount });
+
         res.json(filteredResults);
     })
   })
@@ -224,26 +230,11 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
 
 router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   let namesList = req.params.namesList.split(',');
-  Cocktail.aggregate([
-      {
-        $match: { name: { '$in': namesList } }
-      }
-    ]).
-    exec((err, cocktails) => {
-      if(err) {
-        res.send(err);
-      }
-      res.json(cocktails);
-    })
+  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/ingredients/:ingredientName', (req, res) => {
-  Ingredient.find({name: req.params.ingredientName}, (err, ingredient) => {
-    if (err){
-      res.send(err);
-    }
-    res.json(ingredient);
-  })
+  ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
 
 router.post('/register', (req,res) => {
@@ -277,10 +268,6 @@ router.get('/me', authenticate, (req, res) => {
   console.log(req.user);
   res.status(200).json(req.user);
 });
-
-app.get('/', (req, res) => {
-  res.render('index.ejs')
-})
 
 app.listen(port);
 console.log(`Server is listening on port ${port}`);
