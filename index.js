@@ -243,6 +243,7 @@ router.post('/register', (req,res) => {
   }), req.body.password, (err,account) =>{
     if (err){
       res.send(err);
+      return;
     }
     passport.authenticate(
       'local', {
