@@ -82,6 +82,41 @@ describe('API Routes', () => {
     })
   })
 
+  '/cocktails/id/:cocktailId'
+
+  describe('/GET details of a cocktail given its id', () => {
+    it('returns all details of that cocktail', (done) => {
+      chai.request(server)
+        .get("/cocktails/name/Horse's Neck")
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          expect(res.body).to.include.all.keys(
+            'name', 'glass', 'category', 'ingredients', 'garnish', 'preparation', 'pictureUrl'
+          );
+          done();
+        })
+    })
+
+    it('includes the details of each ingredient', (done) => {
+      chai.request(server)
+        .get("/cocktails/name/Horse's Neck")
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          var result = res.body;
+
+          result.ingredients.forEach(item => {
+            expect(item).to.have.property('ingredient');
+            expect(item.ingredient).to.include.all.keys(
+              'name', 'abv', 'taste'
+            );
+          })
+          done();
+        })
+    })
+  })
+
   describe('/GET cocktails containing single ingredient', () => {
     it('it should GET cocktails containing single ingredient', (done) => {
       chai.request(server)
