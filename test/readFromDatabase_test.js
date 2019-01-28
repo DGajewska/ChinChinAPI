@@ -32,6 +32,23 @@ describe('API Routes', () => {
     })
   })
 
+  describe('/GET details for each cocktail in a list of names', () => {
+    it('each cocktail returned matches a name in the list provided', (done) => {
+      chai.request(server)
+        .get("/cocktails/filter/by-cocktail/Screwdriver,Mojito,Horse's Neck")
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('array');
+          var result = res.body;
+
+          result.forEach(cocktail => {
+            expect(cocktail.name).to.be.oneOf(["Screwdriver", "Mojito", "Horse's Neck"]);
+          })
+          done();
+        })
+    })
+  })
+
   describe('/GET cocktails containing ingredients, sort by least missing', () => {
     it('it should GET cocktails containing ingredients, sorted by least amount of ingredients missing', (done) => {
       chai.request(server)
