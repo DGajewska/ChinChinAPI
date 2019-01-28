@@ -1,5 +1,6 @@
 const Cocktail = require('../models/cocktail');
 const Ingredient = require('../models/ingredient');
+const Account = require('../models/account');
 
 class ReadFromDatabase {
 
@@ -128,6 +129,52 @@ class ReadFromDatabase {
       })
     })
   }
+
+  static cabinetView(userId, res) {
+    Account.findById(userId,
+    { _id: false,
+      cabinetIngredients: true})
+      .exec(
+        (err, account) => { standardResponse(res, err, account) }
+      );
+  }
+
+  static cabinetAdd(userId, ingredientsList, res) {
+    Account.updateOne(
+      { _id: userId },
+      { $addToSet:
+        { cabinetIngredients:
+          { $each: ingredientsList }
+        }
+      }
+    ).exec(
+      (err) => {
+        if (err) {
+          res.send(err);
+        }
+        this.cabinetView(userId, res);
+      }
+    );
+  }
+
+  static cabinetDelete(userId, ingredientsList, res) {
+    Account.updateOne(
+      { _id: userId },
+      { $pull:
+        { cabinetIngredients:
+          { $in: ingredientsList }
+        }
+      }
+    ).exec(
+      (err) => {
+        if (err) {
+          res.send(err);
+        }
+        this.cabinetView(userId, res);
+      }
+    );
+  }
+
 }
 
 function standardResponse(response, error, result) {

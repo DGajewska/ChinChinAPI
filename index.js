@@ -87,6 +87,18 @@ router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
 
+router.get('/user/cabinet/view', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetView(req.user.id, res);
+});
+
+router.post('/user/cabinet/add', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetAdd(req.user.id, req.body.ingredientsList, res);
+});
+
+router.post('/user/cabinet/delete', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetDelete(req.user.id, req.body.ingredientsList, res);
+});
+
 router.post('/register', (req,res) => {
   Account.register(new Account({
     username: req.body.email
@@ -117,6 +129,15 @@ router.get('/logout', authenticate, (req, res) => {
 router.get('/me', authenticate, (req, res) => {
   console.log(req.user);
   res.status(200).json(req.user);
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+    res.status(401).json({name: err.name, message: 'Not logged in'});
+    return;
+  }
+  console.log(err);
 });
 
 module.exports = app.listen(port);
