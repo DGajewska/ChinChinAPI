@@ -8,6 +8,9 @@ let Account = new Schema({
   },
   password: {
     type: String,
+  },
+  cabinetIngredients: {
+    type: [String],
   }
 })
 
