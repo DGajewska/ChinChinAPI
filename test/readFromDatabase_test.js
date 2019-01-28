@@ -165,6 +165,23 @@ describe('API Routes', () => {
     })
   })
 
+  describe('/GET a list of all ingredients in the database', () => {
+    it('returns a list of names', (done) => {
+      chai.request(server)
+        .get("/ingredients/all")
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('array');
+          var result = res.body;
+
+          result.forEach(ingredient => {
+            expect(ingredient).to.have.property('name');
+          })
+          done();
+        })
+    })
+  })
+
   describe('/GET ingredient by name', () => {
     it('it should GET one ingredient by name', (done) => {
       chai.request(server)
