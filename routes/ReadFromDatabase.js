@@ -148,7 +148,30 @@ class ReadFromDatabase {
         }
       }
     ).exec(
-      (err) => { standardResponse(res, err, {message: 'success'}) }
+      (err) => {
+        if (err) {
+          res.send(err);
+        }
+        this.cabinetView(userId, res);
+      }
+    );
+  }
+
+  static cabinetDelete(userId, ingredientsList, res) {
+    Account.updateOne(
+      { _id: userId },
+      { $pull:
+        { cabinetIngredients:
+          { $in: ingredientsList }
+        }
+      }
+    ).exec(
+      (err) => {
+        if (err) {
+          res.send(err);
+        }
+        this.cabinetView(userId, res);
+      }
     );
   }
 

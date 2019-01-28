@@ -127,6 +127,10 @@ router.post('/user/cabinet/add', authenticate, (req, res) => {
   ReadFromDatabase.cabinetAdd(req.user.id, req.body.ingredientsList, res);
 });
 
+router.post('/user/cabinet/delete', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetDelete(req.user.id, req.body.ingredientsList, res);
+});
+
 // error handler
 app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
