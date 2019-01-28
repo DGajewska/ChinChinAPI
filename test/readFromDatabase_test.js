@@ -52,18 +52,30 @@ describe('API Routes', () => {
   describe('/GET cocktails containing ingredients, sort by least missing', () => {
     it('it should GET cocktails containing ingredients, sorted by least amount of ingredients missing', (done) => {
       chai.request(server)
-        .get("/cocktails/filter/by-ingredient/Gin,Vodka,Orange juice/1")
+        .get("/cocktails/filter/by-ingredient/Gin,Vodka,Orange juice")
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');
           var result = res.body;
 
           result.forEach((cocktail, index, result) => {
-            expect(cocktail).to.have.property('missingCount').below(2);
             expect(cocktail.ingredients).to.be.containingAnyOf(['Vodka', 'Gin', 'Orange juice']);
             if (index > 0) {
               expect(cocktail.missingCount).to.be.at.least(result[index - 1].missingCount);
             }
+          })
+          done();
+        })
+    })
+
+    it('has an option to limit the number of missing ingredients', (done) => {
+      chai.request(server)
+        .get("/cocktails/filter/by-ingredient/Gin,Vodka,Orange juice/1")
+        .end((err, res) => {
+          var result = res.body;
+
+          result.forEach((cocktail, index, result) => {
+            expect(cocktail).to.have.property('missingCount').below(2);
           })
           done();
         })
