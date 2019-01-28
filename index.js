@@ -79,6 +79,10 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
   ReadFromDatabase.oneCocktail(req.params.cocktailName, res)
 })
 
+router.get('/ingredients/all', (_, res) => {
+  ReadFromDatabase.allIngredients(res);
+})
+
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
@@ -95,7 +99,7 @@ router.post('/register', (req,res) => {
       'local', {
         session: false
       })(req, res, () => {
-        res.status(200).send('Successfully created new account');
+        res.status(200).json({message: 'Successfully created new account'});
       });
   });
 });
