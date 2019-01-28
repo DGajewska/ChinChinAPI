@@ -52,8 +52,13 @@ app.get('/', (_, res) => {
   res.json({message: 'Welcome to Chin Chin API'})
 })
 
-router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
-  ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
+router.get('/cocktails/all', (_, res) => {
+  ReadFromDatabase.allCocktails(res);
+})
+
+router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
+  let namesList = req.params.namesList.split(',');
+  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, res) => {
@@ -66,17 +71,12 @@ router.get('/cocktails/id/:cocktailId', (req, res) => {
   ReadFromDatabase.findByCocktailId(req.params.cocktailId, res);
 })
 
-router.get('/cocktails/all', (_, res) => {
-  ReadFromDatabase.allCocktails(res);
+router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
+  ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
 })
 
 router.get('/cocktails/name/:cocktailName', (req, res) => {
   ReadFromDatabase.oneCocktail(req.params.cocktailName, res)
-})
-
-router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
-  let namesList = req.params.namesList.split(',');
-  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/ingredients/all', (_, res) => {
@@ -86,6 +86,18 @@ router.get('/ingredients/all', (_, res) => {
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
+
+router.get('/user/cabinet/view', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetView(req.user.id, res);
+});
+
+router.post('/user/cabinet/add', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetAdd(req.user.id, req.body.ingredientsList, res);
+});
+
+router.post('/user/cabinet/delete', authenticate, (req, res) => {
+  ReadFromDatabase.cabinetDelete(req.user.id, req.body.ingredientsList, res);
+});
 
 router.post('/register', (req,res) => {
   Account.register(new Account({
@@ -119,18 +131,6 @@ router.get('/me', authenticate, (req, res) => {
   res.status(200).json(req.user);
 });
 
-router.get('/user/cabinet/view', authenticate, (req, res) => {
-  ReadFromDatabase.cabinetView(req.user.id, res);
-});
-
-router.post('/user/cabinet/add', authenticate, (req, res) => {
-  ReadFromDatabase.cabinetAdd(req.user.id, req.body.ingredientsList, res);
-});
-
-router.post('/user/cabinet/delete', authenticate, (req, res) => {
-  ReadFromDatabase.cabinetDelete(req.user.id, req.body.ingredientsList, res);
-});
-
 // error handler
 app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
@@ -140,5 +140,5 @@ app.use(function (err, req, res, next) {
   console.log(err);
 });
 
-app.listen(port);
+module.exports = app.listen(port);
 console.log(`Server is listening on port ${port}`);
