@@ -14,6 +14,24 @@ chai.use(chaiHttp);
 
 describe('API Routes', () => {
 
+  describe('/GET a list of all cocktails in the database', () => {
+    it('each cocktail in the list should have a name and pictureUrl', (done) => {
+      chai.request(server)
+        .get("/cocktails/all")
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('array');
+          var result = res.body;
+
+          result.forEach(cocktail => {
+            expect(cocktail).to.have.property('name');
+            expect(cocktail).to.have.property('pictureUrl');
+          })
+          done();
+        })
+    })
+  })
+
   describe('/GET cocktails containing ingredients, sort by least missing', () => {
     it('it should GET cocktails containing ingredients, sorted by least amount of ingredients missing', (done) => {
       chai.request(server)
@@ -21,7 +39,7 @@ describe('API Routes', () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');
-          var result = res.body
+          var result = res.body;
 
           result.forEach((cocktail, index, result) => {
             expect(cocktail).to.have.property('missingCount').below(2);
@@ -77,7 +95,7 @@ describe('API Routes', () => {
           res.should.have.status(200);
           res.body.should.be.a('object');
           expect(res.body.name).equal('Gin');
-          done()
+          done();
         })
     })
   })
