@@ -95,7 +95,7 @@ router.post('/register', (req,res) => {
       'local', {
         session: false
       })(req, res, () => {
-        res.status(200).send('Successfully created new account');
+        res.status(200).json({message: 'Successfully created new account'});
       });
   });
 });
