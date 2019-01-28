@@ -52,8 +52,13 @@ app.get('/', (_, res) => {
   res.json({message: 'Welcome to Chin Chin API'})
 })
 
-router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
-  ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
+router.get('/cocktails/all', (_, res) => {
+  ReadFromDatabase.allCocktails(res);
+})
+
+router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
+  let namesList = req.params.namesList.split(',');
+  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, res) => {
@@ -66,17 +71,12 @@ router.get('/cocktails/id/:cocktailId', (req, res) => {
   ReadFromDatabase.findByCocktailId(req.params.cocktailId, res);
 })
 
-router.get('/cocktails/all', (_, res) => {
-  ReadFromDatabase.allCocktails(res);
+router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
+  ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
 })
 
 router.get('/cocktails/name/:cocktailName', (req, res) => {
   ReadFromDatabase.oneCocktail(req.params.cocktailName, res)
-})
-
-router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
-  let namesList = req.params.namesList.split(',');
-  ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
 router.get('/ingredients/all', (_, res) => {
@@ -119,5 +119,5 @@ router.get('/me', authenticate, (req, res) => {
   res.status(200).json(req.user);
 });
 
-app.listen(port);
+module.exports = app.listen(port);
 console.log(`Server is listening on port ${port}`);
