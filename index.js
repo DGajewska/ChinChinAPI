@@ -115,5 +115,5 @@ router.get('/me', authenticate, (req, res) => {
   res.status(200).json(req.user);
 });
 
-app.listen(port);
+module.exports = app.listen(port);
 console.log(`Server is listening on port ${port}`);

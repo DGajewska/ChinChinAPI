@@ -3,11 +3,13 @@ const ReadFromDatabase = require ('../routes/ReadFromDatabase')
 
 //Require the dev-dependencies
 const chai = require('chai');
+const assertArrays = require('chai-arrays');
 const chaiHttp = require('chai-http');
 const server = require('../index');
 const should = chai.should();
 const expect = chai.expect
 
+chai.use(assertArrays);
 chai.use(chaiHttp);
 
 describe('API Routes', () => {
@@ -36,20 +38,17 @@ describe('API Routes', () => {
   describe('/GET cocktails containing ingredients, sort by least missing', () => {
     it('it should GET cocktails containing ingredients, sorted by least amount of ingredients missing', (done) => {
       chai.request(server)
-        .get("/cocktails/filter/by-ingredient/:ingredients/:maxMissing?")
+        .get("/cocktails/filter/by-ingredient/Gin,Vodka,Orange juice/1")
         .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('array');
             console.log(res.body)
-            // var result = res.body
-            //
-            // result.forEach(cocktail => {
-            //   var ingredients = []
-            //   cocktail.ingredients.forEach(ingredient => {
-            //     ingredients.push(ingredient.ingredient.name)
-            //   })
-            //     expect(ingredients).to.include('Cranberry juice')
-            //   })
+            var result = res.body
+
+            result.forEach(cocktail => {
+              expect(cocktail).to.have.property('missingCount').to.be.below(2);
+              expect(cocktail.ingredients).to.be.containingAnyOf(['Vodka', 'Gin', 'Orange juice']);
+              })
           done();
         })
     })
@@ -74,8 +73,8 @@ describe('API Routes', () => {
         .get("/cocktails/name/Horse's Neck")
         .end((err, res) => {
             res.should.have.status(200);
-            res.body.should.be.a('object');
-            expect(res.body.name).equal("Horse's Neck");
+            res.body[0].should.be.a('object');
+            expect(res.body[0].name).equal("Horse's Neck");
           done();
         })
     })
