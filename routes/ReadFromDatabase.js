@@ -16,7 +16,7 @@ class ReadFromDatabase {
   }
 
   static oneCocktail(cocktailName, res) {
-    Cocktail.findOne(
+    Cocktail.find(
       { name: cocktailName }
     ).populate(
       { path: 'ingredients.ingredient',
