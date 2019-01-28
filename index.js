@@ -79,6 +79,10 @@ router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   ReadFromDatabase.filterByCocktail(namesList, res);
 })
 
+router.get('/ingredients/all', (_, res) => {
+  ReadFromDatabase.allIngredients(res);
+})
+
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
