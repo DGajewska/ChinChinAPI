@@ -82,12 +82,10 @@ describe('API Routes', () => {
     })
   })
 
-  '/cocktails/id/:cocktailId'
-
   describe('/GET details of a cocktail given its id', () => {
     it('returns all details of that cocktail', (done) => {
       chai.request(server)
-        .get("/cocktails/name/Horse's Neck")
+        .get("/cocktails/id/5c484816c0b5ef284ce9d216")
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
@@ -98,9 +96,9 @@ describe('API Routes', () => {
         })
     })
 
-    it('includes the details of each ingredient', (done) => {
+    it('includes the name of each ingredient', (done) => {
       chai.request(server)
-        .get("/cocktails/name/Horse's Neck")
+        .get("/cocktails/id/5c484816c0b5ef284ce9d216")
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
@@ -108,9 +106,7 @@ describe('API Routes', () => {
 
           result.ingredients.forEach(item => {
             expect(item).to.have.property('ingredient');
-            expect(item.ingredient).to.include.all.keys(
-              'name', 'abv', 'taste'
-            );
+            expect(item.ingredient).to.have.property('name');
           })
           done();
         })
@@ -146,6 +142,24 @@ describe('API Routes', () => {
           res.should.have.status(200);
           res.body.should.be.a('object');
           expect(res.body.name).equal("Horse's Neck");
+          done();
+        })
+    })
+
+    it('includes the details of each ingredient', (done) => {
+      chai.request(server)
+        .get("/cocktails/name/Horse's Neck")
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          var result = res.body;
+
+          result.ingredients.forEach(item => {
+            expect(item).to.have.property('ingredient');
+            expect(item.ingredient).to.include.all.keys(
+              'name', 'abv', 'taste'
+            );
+          })
           done();
         })
     })
