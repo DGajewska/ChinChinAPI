@@ -20,7 +20,7 @@ describe('API Routes', () => {
         .get("/cocktails/all")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('array');
+          res.body.should.be.an('array');
           var result = res.body;
 
           result.forEach(cocktail => {
@@ -38,7 +38,7 @@ describe('API Routes', () => {
         .get("/cocktails/filter/by-cocktail/Screwdriver,Mojito,Horse's Neck")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('array');
+          res.body.should.be.an('array');
           var result = res.body;
 
           result.forEach(cocktail => {
@@ -55,7 +55,7 @@ describe('API Routes', () => {
         .get("/cocktails/filter/by-ingredient/Gin,Vodka,Orange juice")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('array');
+          res.body.should.be.an('array');
           var result = res.body;
 
           result.forEach((cocktail, index, result) => {
@@ -88,7 +88,7 @@ describe('API Routes', () => {
         .get("/cocktails/id/5c484816c0b5ef284ce9d216")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('object');
+          res.body.should.be.an('object');
           expect(res.body).to.include.all.keys(
             'name', 'glass', 'category', 'ingredients', 'garnish', 'preparation', 'pictureUrl'
           );
@@ -101,7 +101,7 @@ describe('API Routes', () => {
         .get("/cocktails/id/5c484816c0b5ef284ce9d216")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('object');
+          res.body.should.be.an('object');
           var result = res.body;
 
           result.ingredients.forEach(item => {
@@ -119,7 +119,7 @@ describe('API Routes', () => {
         .get("/cocktails/ingredient/Cranberry juice")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('array');
+          res.body.should.be.an('array');
           var result = res.body;
 
           result.forEach(cocktail => {
@@ -140,8 +140,8 @@ describe('API Routes', () => {
         .get("/cocktails/name/Horse's Neck")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('object');
-          expect(res.body.name).equal("Horse's Neck");
+          res.body[0].should.be.an('object');
+          expect(res.body[0].name).equal("Horse's Neck");
           done();
         })
     })
@@ -151,8 +151,8 @@ describe('API Routes', () => {
         .get("/cocktails/name/Horse's Neck")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('object');
-          var result = res.body;
+          res.body[0].should.be.an('object');
+          var result = res.body[0];
 
           result.ingredients.forEach(item => {
             expect(item).to.have.property('ingredient');
@@ -171,7 +171,7 @@ describe('API Routes', () => {
         .get("/ingredients/all")
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('array');
+          res.body.should.be.an('array');
           var result = res.body;
 
           result.forEach(ingredient => {
@@ -188,7 +188,7 @@ describe('API Routes', () => {
         .get('/ingredients/Gin')
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('object');
+          res.body.should.be.an('object');
           expect(res.body.name).equal('Gin');
           done();
         })
