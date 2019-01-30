@@ -62,13 +62,8 @@ router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, re
   ReadFromDatabase.filterByIngredientSortByLeastMissing(ingredientsList, maxMissing, res)
 })
 
-
 router.get('/cocktails/name/:cocktailName', (req, res) => {
   ReadFromDatabase.oneCocktail(req.params.cocktailName, res)
-})
-
-router.get('/ingredients/all', (_, res) => {
-  ReadFromDatabase.allIngredients(res);
 })
 
 router.get('/user/cabinet/view', authenticate, (req, res) => {
