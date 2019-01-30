@@ -28,16 +28,6 @@ class ReadFromDatabase {
     );
   }
 
-  static allIngredients(res) {
-    Ingredient.aggregate([
-      { $project: {
-        name: true,
-        _id: false }}]
-    ).exec(
-      (err, ingredients) => { standardResponse(res, err, ingredients) }
-    );
-  }
-
   static filterByIngredientSortByLeastMissing(ingredientsList, maxMissing, res) {
     Ingredient.find(
       { name: { $in: ingredientsList }},

@@ -51,6 +51,7 @@ router.post('/cocktails/add-many', (req, res) => {
   });
 })
 
+
 router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   let namesList = req.params.namesList.split(',');
   ReadFromDatabase.filterByCocktail(namesList, res);
@@ -63,6 +64,7 @@ static filterByCocktail(namesList, res) {
     (err, cocktails) => { standardResponse(res, err, cocktails) }
   );
 }
+
 
 router.get('/cocktails/id/:cocktailId', (req, res) => {
   ReadFromDatabase.findByCocktailId(req.params.cocktailId, res);
@@ -78,6 +80,7 @@ router.get('/cocktails/id/:cocktailId', (req, res) => {
       (err, cocktail) => { standardResponse(res, err, cocktail) }
     );
   }
+
 
 router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
@@ -98,6 +101,7 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
     )});
   }
 
+
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
@@ -107,5 +111,20 @@ router.get('/ingredients/:ingredientName', (req, res) => {
       { name: ingredientName }
     ).exec(
       (err, ingredient) => { standardResponse(res, err, ingredient) }
+    );
+  }
+
+
+router.get('/ingredients/all', (_, res) => {
+  ReadFromDatabase.allIngredients(res);
+})
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
+  static allIngredients(res) {
+    Ingredient.aggregate([
+      { $project: {
+        name: true,
+        _id: false }}]
+    ).exec(
+      (err, ingredients) => { standardResponse(res, err, ingredients) }
     );
   }
