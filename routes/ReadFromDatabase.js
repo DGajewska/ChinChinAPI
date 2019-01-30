@@ -48,21 +48,36 @@ class ReadFromDatabase {
   }
 
   static cabinetAdd(userId, ingredientsList, res) {
-    Account.updateOne(
-      { _id: userId },
-      { $addToSet:
-        { cabinetIngredients:
-          { $each: ingredientsList }
+
+    Ingredient.aggregate([
+      { $project: {
+        name: true,
+        _id: false }}]
+    ).exec((err, ingredients) => { if (err){res.send(err);}
+      let allowedIngredients = ingredients.map((item) => {
+        return item.name;
+      });
+
+      let filteredList = ingredientsList.filter(function(element){
+        return allowedIngredients.includes(element);
+      })
+
+      Account.updateOne(
+        { _id: userId },
+        { $addToSet:
+          { cabinetIngredients:
+            { $each: filteredList }
+          }
         }
-      }
-    ).exec(
-      (err) => {
-        if (err) {
-          res.send(err);
+      ).exec(
+        (err) => {
+          if (err) {
+            res.send(err);
+          }
+          this.cabinetView(userId, res);
         }
-        this.cabinetView(userId, res);
-      }
-    );
+      );
+    });
   }
 
   static cabinetDelete(userId, ingredientsList, res) {
