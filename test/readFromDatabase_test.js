@@ -135,7 +135,7 @@ describe('API Routes', () => {
   })
 
   describe('/GET cocktail by name', () => {
-    it('it should GET one cocktail by name', (done) => {
+    it('it should return an array containing the named cocktail', (done) => {
       chai.request(server)
         .get("/cocktails/name/Horse's Neck")
         .end((err, res) => {
