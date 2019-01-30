@@ -1,9 +1,8 @@
 const Cocktail = require('../models/cocktail');
 const Ingredient = require('../models/ingredient');
-const Account = require('../models/account');
+const SendResponse = require('./SendResponse');
 
 class ReadFromDatabase {
-
   static allCocktails(res) {
     Cocktail.aggregate([
       { $project: {
@@ -11,8 +10,17 @@ class ReadFromDatabase {
         pictureUrl: true,
         _id: false }}]
     ).exec(
-      (err, cocktails) => { standardResponse(res, err, cocktails) }
+      (err, cocktails) => { SendResponse.standardResponse(res, err, cocktails) }
     );
+  }
+
+  static filterByIngredientSortByLeastMissing(ingredientsList, maxMissing, res) {
+    Ingredient.find(
+      { name: { $in: ingredientsList }},
+      {_id: true }
+    ).exec(
+      (err, ingredients) => { findCocktails(err, ingredients, ingredientsList, maxMissing, res) }
+    )
   }
 
   static oneCocktail(cocktailName, res) {
@@ -24,110 +32,33 @@ class ReadFromDatabase {
       { path: 'ingredients.ingredient',
         select: 'name abv taste -_id' }
     ).exec(
-      (err, cocktail) => { standardResponse(res, err, cocktail) }
-    );
-  }
-
-  static filterByIngredientSortByLeastMissing(ingredientsList, maxMissing, res) {
-    Ingredient.find(
-      { name: { $in: ingredientsList }},
-      {_id: true }
-    ).exec(
-      (err, ingredients) => findCocktails(err, ingredients, ingredientsList, maxMissing, res)
-    )
-  }
-
-
-  static cabinetView(userId, res) {
-    Account.findById(userId,
-    { _id: false,
-      cabinetIngredients: true})
-      .exec(
-        (err, account) => { standardResponse(res, err, account) }
-      );
-  }
-
-  static cabinetAdd(userId, ingredientsList, res) {
-
-    Ingredient.aggregate([
-      { $project: {
-        name: true,
-        _id: false }}]
-    ).exec((err, ingredients) => { if (err){res.send(err);}
-      let allowedIngredients = ingredients.map((item) => {
-        return item.name;
-      });
-
-      let filteredList = ingredientsList.filter(function(element){
-        return allowedIngredients.includes(element);
-      })
-
-      Account.updateOne(
-        { _id: userId },
-        { $addToSet:
-          { cabinetIngredients:
-            { $each: filteredList }
-          }
-        }
-      ).exec(
-        (err) => {
-          if (err) {
-            res.send(err);
-          }
-          this.cabinetView(userId, res);
-        }
-      );
-    });
-  }
-
-  static cabinetDelete(userId, ingredientsList, res) {
-    Account.updateOne(
-      { _id: userId },
-      { $pull:
-        { cabinetIngredients:
-          { $in: ingredientsList }
-        }
-      }
-    ).exec(
-      (err) => {
-        if (err) {
-          res.send(err);
-        }
-        this.cabinetView(userId, res);
-      }
+      (err, cocktail) => { SendResponse.standardResponse(res, err, cocktail) }
     );
   }
 }
+
+module.exports = ReadFromDatabase;
+
+// functions below are only used by methods in this class - they are not exposed
 
 function findCocktails(err, ingredients, ingredientsList, maxMissing, res) {
-    if (err) { res.send(err) }
-
-    let ingredientIds = ingredients.map((ingredient) => { return ingredient._id; })
-
-    Cocktail.find(
-      { ingredients: { $elemMatch: { ingredient: { $in: ingredientIds }}}},
-      { name: true,
-        pictureUrl: true,
-        ingredients: true,
-        _id: false }
-    ).populate(
-      { path: 'ingredients.ingredient',
-        select: 'name -_id' }
-    ).exec((err, cocktails) => prepareResponse(err, cocktails, ingredientsList, maxMissing, res)
-    )
-}
-
-
-function prepareResponse(err, cocktails, ingredientsList, maxMissing, res) {
   if (err) { res.send(err) }
 
-  let results = calculateAllMissingCounts(cocktails, ingredientsList, maxMissing)
+  let ingredientIds = ingredients.map((ingredient) => { return ingredient._id; });
 
-  let filteredResults = removeNullElements(results)
-  res.json(filteredResults);
+  Cocktail.find(
+    { ingredients: { $elemMatch: { ingredient: { $in: ingredientIds }}}},
+    { name: true,
+      pictureUrl: true,
+      ingredients: true,
+      _id: false }
+  ).populate(
+    { path: 'ingredients.ingredient',
+      select: 'name -_id' }
+  ).exec(
+    (err, cocktails) => { prepareResponse(err, cocktails, ingredientsList, maxMissing, res) }
+  )
 }
-
-
 
 function calculateAllMissingCounts(cocktails, ingredientsList, maxMissing) {
   let results = cocktails.map((cocktail) => {
@@ -135,14 +66,11 @@ function calculateAllMissingCounts(cocktails, ingredientsList, maxMissing) {
     cocktail.missingCount = 0;
     cocktail = calculateMissingIngredientCountForCocktail(cocktail, ingredientsList)
 
-    if (!maxMissing || cocktail.missingCount <= maxMissing) {
-      return cocktail;
-    }
-  })
+    if (!maxMissing || cocktail.missingCount <= maxMissing) { return cocktail }
+  });
 
   return results
 }
-
 
 function calculateMissingIngredientCountForCocktail(cocktail, ingredientsList) {
   cocktail.ingredients = cocktail.ingredients.map((item) => {
@@ -154,6 +82,13 @@ function calculateMissingIngredientCountForCocktail(cocktail, ingredientsList) {
   return cocktail;
 }
 
+function prepareResponse(err, cocktails, ingredientsList, maxMissing, res) {
+  if (err) { res.send(err) }
+
+  let results = calculateAllMissingCounts(cocktails, ingredientsList, maxMissing);
+  let filteredResults = removeNullElements(results);
+  res.json(filteredResults);
+}
 
 function removeNullElements(results) {
   let filteredResults = results.filter((element) => {
@@ -161,14 +96,6 @@ function removeNullElements(results) {
   });
   filteredResults.sort((a, b) => { return a.missingCount - b.missingCount });
   return filteredResults;
-}
-
-
-function standardResponse(response, error, result) {
-  if (error) {
-    response.send(error);
-  }
-  response.json(result);
 }
 
 module.exports = ReadFromDatabase;

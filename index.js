@@ -10,6 +10,7 @@ const LocalStrategy = require('passport-local').Strategy;
 
 const authMiddleware = require('./middleware/authmiddleware');
 const ReadFromDatabase = require('./routes/ReadFromDatabase');
+const DrinksCabinet = require('./routes/DrinksCabinet');
 
 const authenticate = authMiddleware.authenticate;
 const generateAccessToken = authMiddleware.generateAccessToken;
@@ -67,15 +68,15 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
 })
 
 router.get('/user/cabinet/view', authenticate, (req, res) => {
-  ReadFromDatabase.cabinetView(req.user.id, res);
+  DrinksCabinet.cabinetView(req.user.id, res);
 });
 
 router.post('/user/cabinet/add', authenticate, (req, res) => {
-  ReadFromDatabase.cabinetAdd(req.user.id, req.body.ingredientsList, res);
+  DrinksCabinet.cabinetAdd(req.user.id, req.body.ingredientsList, res);
 });
 
 router.post('/user/cabinet/delete', authenticate, (req, res) => {
-  ReadFromDatabase.cabinetDelete(req.user.id, req.body.ingredientsList, res);
+  DrinksCabinet.cabinetDelete(req.user.id, req.body.ingredientsList, res);
 });
 
 router.post('/register', (req,res) => {
