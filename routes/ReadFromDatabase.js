@@ -16,6 +16,8 @@ class ReadFromDatabase {
   }
 
   static oneCocktail(cocktailName, res) {
+    // find() is used rather than findOne() as the ChinChin React app expects an array
+    // attempts were made to have the app act on an object, but without success
     Cocktail.find(
       { name: cocktailName }
     ).populate(
