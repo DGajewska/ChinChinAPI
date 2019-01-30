@@ -55,7 +55,7 @@ router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
   let namesList = req.params.namesList.split(',');
   ReadFromDatabase.filterByCocktail(namesList, res);
 })
-
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
 static filterByCocktail(namesList, res) {
   Cocktail.aggregate([
     { $match: { name: { '$in': namesList }}}]
@@ -67,7 +67,7 @@ static filterByCocktail(namesList, res) {
 router.get('/cocktails/id/:cocktailId', (req, res) => {
   ReadFromDatabase.findByCocktailId(req.params.cocktailId, res);
 })
-
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
   static findByCocktailId(cocktailId, res) {
     Cocktail.findById(
       cocktailId
@@ -82,7 +82,7 @@ router.get('/cocktails/id/:cocktailId', (req, res) => {
 router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
   ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
 })
-
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
   static filterByIngredient(ingredient, res) {
     Ingredient.find(
       { name: ingredient }, (err, ingredient) => {
@@ -101,7 +101,7 @@ router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
 router.get('/ingredients/:ingredientName', (req, res) => {
   ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
-
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
   static ingredientByName(ingredientName, res) {
     Ingredient.findOne(
       { name: ingredientName }
