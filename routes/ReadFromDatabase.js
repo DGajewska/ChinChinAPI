@@ -43,52 +43,10 @@ class ReadFromDatabase {
       { name: { $in: ingredientsList }},
       {_id: true }
     ).exec(
-      (err, ingredients) => {
-      if (err) {
-        res.send(err);
-      }
-      let ingredientIds = ingredients.map((ingredient) => {
-        return ingredient._id;
-      })
-      Cocktail.find(
-        { ingredients: { $elemMatch: { ingredient: { $in: ingredientIds }}}},
-        { name: true,
-          pictureUrl: true,
-          ingredients: true,
-          _id: false }
-      ).populate(
-        { path: 'ingredients.ingredient',
-          select: 'name -_id' }
-      ).exec((err, cocktails) => {
-        if (err){
-          res.send(err);
-        }
-        let results = cocktails.map((cocktail) => {
-          cocktail = cocktail.toObject();
-          cocktail.missingCount = 0;
-
-          cocktail.ingredients = cocktail.ingredients.map((item) => {
-            if (!ingredientsList.includes(item.ingredient.name)) {
-              cocktail.missingCount += 1;
-            }
-            return item.ingredient.name;
-          });
-
-          if (!maxMissing || cocktail.missingCount <= maxMissing) {
-            return cocktail;
-          }
-        })
-
-        let filteredResults = results.filter((element) => {
-          return element != null;
-        });
-
-        filteredResults.sort((a, b) => { return a.missingCount - b.missingCount });
-
-        res.json(filteredResults);
-      })
-    })
+      (err, ingredients) => findCocktails(err, ingredients, ingredientsList, maxMissing, res)
+    )
   }
+
 
   static cabinetView(userId, res) {
     Account.findById(userId,
@@ -134,8 +92,72 @@ class ReadFromDatabase {
       }
     );
   }
-
 }
+
+function findCocktails(err, ingredients, ingredientsList, maxMissing, res) {
+    if (err) { res.send(err) }
+
+    let ingredientIds = ingredients.map((ingredient) => { return ingredient._id; })
+
+    Cocktail.find(
+      { ingredients: { $elemMatch: { ingredient: { $in: ingredientIds }}}},
+      { name: true,
+        pictureUrl: true,
+        ingredients: true,
+        _id: false }
+    ).populate(
+      { path: 'ingredients.ingredient',
+        select: 'name -_id' }
+    ).exec((err, cocktails) => prepareResponse(err, cocktails, ingredientsList, maxMissing, res)
+    )
+}
+
+
+function prepareResponse(err, cocktails, ingredientsList, maxMissing, res) {
+  if (err) { res.send(err) }
+
+  let results = calculateAllMissingCounts(cocktails, ingredientsList, maxMissing)
+
+  let filteredResults = removeNullElements(results)
+  res.json(filteredResults);
+}
+
+
+
+function calculateAllMissingCounts(cocktails, ingredientsList, maxMissing) {
+  let results = cocktails.map((cocktail) => {
+    cocktail = cocktail.toObject();
+    cocktail.missingCount = 0;
+    cocktail = calculateMissingIngredientCountForCocktail(cocktail, ingredientsList)
+
+    if (!maxMissing || cocktail.missingCount <= maxMissing) {
+      return cocktail;
+    }
+  })
+
+  return results
+}
+
+
+function calculateMissingIngredientCountForCocktail(cocktail, ingredientsList) {
+  cocktail.ingredients = cocktail.ingredients.map((item) => {
+    if (!ingredientsList.includes(item.ingredient.name)) {
+      cocktail.missingCount += 1;
+    }
+    return item.ingredient.name;
+  });
+  return cocktail;
+}
+
+
+function removeNullElements(results) {
+  let filteredResults = results.filter((element) => {
+    return element != null;
+  });
+  filteredResults.sort((a, b) => { return a.missingCount - b.missingCount });
+  return filteredResults;
+}
+
 
 function standardResponse(response, error, result) {
   if (error) {
