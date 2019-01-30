@@ -56,24 +56,12 @@ router.get('/cocktails/all', (_, res) => {
   ReadFromDatabase.allCocktails(res);
 })
 
-router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
-  let namesList = req.params.namesList.split(',');
-  ReadFromDatabase.filterByCocktail(namesList, res);
-})
-
 router.get('/cocktails/filter/by-ingredient/:ingredients/:maxMissing?', (req, res) => {
   let ingredientsList = req.params.ingredients.split(',');
   let maxMissing = req.params.maxMissing;
   ReadFromDatabase.filterByIngredientSortByLeastMissing(ingredientsList, maxMissing, res)
 })
 
-router.get('/cocktails/id/:cocktailId', (req, res) => {
-  ReadFromDatabase.findByCocktailId(req.params.cocktailId, res);
-})
-
-router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
-  ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
-})
 
 router.get('/cocktails/name/:cocktailName', (req, res) => {
   ReadFromDatabase.oneCocktail(req.params.cocktailName, res)
@@ -81,10 +69,6 @@ router.get('/cocktails/name/:cocktailName', (req, res) => {
 
 router.get('/ingredients/all', (_, res) => {
   ReadFromDatabase.allIngredients(res);
-})
-
-router.get('/ingredients/:ingredientName', (req, res) => {
-  ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
 })
 
 router.get('/user/cabinet/view', authenticate, (req, res) => {
@@ -126,10 +110,6 @@ router.get('/logout', authenticate, (req, res) => {
     res.status(200).send('Successfully logged out');
 });
 
-router.get('/me', authenticate, (req, res) => {
-  console.log(req.user);
-  res.status(200).json(req.user);
-});
 
 // error handler
 app.use(function (err, req, res, next) {

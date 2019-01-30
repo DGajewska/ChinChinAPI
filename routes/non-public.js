@@ -1,4 +1,5 @@
-// RELOCATE THESE TO index.js IF DB NEEDS TO BE REPOPULATE
+// Previously used API Routes
+// RELOCATE THESE TO index.js IF REQUIRED
 
 router.post('/ingredients/add', (req, res) =>{
   var newIngredient = new Ingredient();
@@ -49,3 +50,62 @@ router.post('/cocktails/add-many', (req, res) => {
     res.json({ message: 'Cocktails added successfully' });
   });
 })
+
+router.get('/cocktails/filter/by-cocktail/:namesList', (req, res) => {
+  let namesList = req.params.namesList.split(',');
+  ReadFromDatabase.filterByCocktail(namesList, res);
+})
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
+static filterByCocktail(namesList, res) {
+  Cocktail.aggregate([
+    { $match: { name: { '$in': namesList }}}]
+  ).exec(
+    (err, cocktails) => { standardResponse(res, err, cocktails) }
+  );
+}
+
+router.get('/cocktails/id/:cocktailId', (req, res) => {
+  ReadFromDatabase.findByCocktailId(req.params.cocktailId, res);
+})
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
+  static findByCocktailId(cocktailId, res) {
+    Cocktail.findById(
+      cocktailId
+    ).populate(
+      { path: 'ingredients.ingredient',
+        select: 'name -_id'}
+    ).exec(
+      (err, cocktail) => { standardResponse(res, err, cocktail) }
+    );
+  }
+
+router.get('/cocktails/ingredient/:ingredientName', (req, res) => {
+  ReadFromDatabase.filterByIngredient(req.params.ingredientName, res)
+})
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
+  static filterByIngredient(ingredient, res) {
+    Ingredient.find(
+      { name: ingredient }, (err, ingredient) => {
+    if (err) {
+      res.send(err);
+    }
+    Cocktail.find(
+      { ingredients: { $elemMatch: { ingredient: ingredient[0]._id }}}
+    ).populate(
+      { path: 'ingredients.ingredient', select: 'name -_id' }
+    ).exec(
+      (err, cocktails) => { standardResponse(res, err, cocktails) }
+    )});
+  }
+
+router.get('/ingredients/:ingredientName', (req, res) => {
+  ReadFromDatabase.ingredientByName(req.params.ingredientName, res);
+})
+// move the 'static' below into ReadFromDatabase.js if the above route is moved to index.js
+  static ingredientByName(ingredientName, res) {
+    Ingredient.findOne(
+      { name: ingredientName }
+    ).exec(
+      (err, ingredient) => { standardResponse(res, err, ingredient) }
+    );
+  }

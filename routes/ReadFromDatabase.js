@@ -28,40 +28,6 @@ class ReadFromDatabase {
     );
   }
 
-  static findByCocktailId(cocktailId, res) {
-    Cocktail.findById(
-      cocktailId
-    ).populate(
-      { path: 'ingredients.ingredient',
-        select: 'name -_id'}
-    ).exec(
-      (err, cocktail) => { standardResponse(res, err, cocktail) }
-    );
-  }
-
-  static filterByCocktail(namesList, res) {
-    Cocktail.aggregate([
-      { $match: { name: { '$in': namesList }}}]
-    ).exec(
-      (err, cocktails) => { standardResponse(res, err, cocktails) }
-    );
-  }
-
-  static filterByIngredient(ingredient, res) {
-    Ingredient.find(
-      { name: ingredient }, (err, ingredient) => {
-    if (err) {
-      res.send(err);
-    }
-    Cocktail.find(
-      { ingredients: { $elemMatch: { ingredient: ingredient[0]._id }}}
-    ).populate(
-      { path: 'ingredients.ingredient', select: 'name -_id' }
-    ).exec(
-      (err, cocktails) => { standardResponse(res, err, cocktails) }
-    )});
-  }
-
   static allIngredients(res) {
     Ingredient.aggregate([
       { $project: {
@@ -69,14 +35,6 @@ class ReadFromDatabase {
         _id: false }}]
     ).exec(
       (err, ingredients) => { standardResponse(res, err, ingredients) }
-    );
-  }
-
-  static ingredientByName(ingredientName, res) {
-    Ingredient.findOne(
-      { name: ingredientName }
-    ).exec(
-      (err, ingredient) => { standardResponse(res, err, ingredient) }
     );
   }
 
